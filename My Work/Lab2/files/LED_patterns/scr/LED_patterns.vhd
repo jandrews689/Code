@@ -59,6 +59,7 @@ begin
 			--reset logic here. 
 			current_state <= RIGHT_SHIFT;
 			led_enable <= '0';
+			counter <= (others => '0');
 		elsif rising_edge(clk) then
 			current_state <= next_state;
 			led_enable <= '1';
@@ -82,6 +83,10 @@ begin
 				led_enable_shift_right <= led_enable;
 				led_enable_shift_left <= not led_enable;
 
+			when others =>
+
+				-- do nothing. 
+
 		end case;
 
 		LEDR <= LEDR(7) & LEDR_pattern;
@@ -101,6 +106,9 @@ begin
 			-- 	if PB_signal then
 			-- 		next_state <= RIGHT_SHIFT;
 			-- 	end if;
+
+			when others =>
+				-- do nothing
 		end case;
 
 	end process;

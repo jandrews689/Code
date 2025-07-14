@@ -22,7 +22,7 @@ on the Quartus Prime software download page.
 (header "graphic" (version "1.4"))
 (pin
 	(input)
-	(rect 144 488 320 504)
+	(rect 144 536 320 552)
 	(text "INPUT" (rect 133 0 161 9)(font "Arial" (font_size 6)))
 	(text "SW[0]" (rect 9 0 39 10)(font "Arial" ))
 	(pt 176 8)
@@ -35,11 +35,11 @@ on the Quartus Prime software download page.
 		(line (pt 117 12)(pt 121 8))
 	)
 	(text "VCC" (rect 136 7 156 16)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 72 504 144 520))
+	(annotation_block (location)(rect 72 552 144 568))
 )
 (pin
 	(input)
-	(rect 144 504 320 520)
+	(rect 144 552 320 568)
 	(text "INPUT" (rect 133 0 161 9)(font "Arial" (font_size 6)))
 	(text "SW[1]" (rect 9 0 39 10)(font "Arial" ))
 	(pt 176 8)
@@ -52,11 +52,11 @@ on the Quartus Prime software download page.
 		(line (pt 117 12)(pt 121 8))
 	)
 	(text "VCC" (rect 136 7 156 16)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 72 520 144 536))
+	(annotation_block (location)(rect 72 568 144 584))
 )
 (pin
 	(input)
-	(rect 144 520 320 536)
+	(rect 144 568 320 584)
 	(text "INPUT" (rect 133 0 161 9)(font "Arial" (font_size 6)))
 	(text "SW[2]" (rect 9 0 39 10)(font "Arial" ))
 	(pt 176 8)
@@ -69,11 +69,11 @@ on the Quartus Prime software download page.
 		(line (pt 117 12)(pt 121 8))
 	)
 	(text "VCC" (rect 136 7 156 16)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 80 536 144 552))
+	(annotation_block (location)(rect 80 584 144 600))
 )
 (pin
 	(input)
-	(rect 144 536 320 552)
+	(rect 144 584 320 600)
 	(text "INPUT" (rect 133 0 161 9)(font "Arial" (font_size 6)))
 	(text "SW[3]" (rect 9 0 39 10)(font "Arial" ))
 	(pt 176 8)
@@ -86,7 +86,7 @@ on the Quartus Prime software download page.
 		(line (pt 117 12)(pt 121 8))
 	)
 	(text "VCC" (rect 136 7 156 16)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 80 552 144 568))
+	(annotation_block (location)(rect 80 600 144 616))
 )
 (pin
 	(input)
@@ -355,11 +355,26 @@ on the Quartus Prime software download page.
 		(pt 240 32)
 		(output)
 		(text "LEDR[7..0]" (rect 0 0 55 10)(font "Arial" ))
-		(text "LEDR[7..0]" (rect 173 27 219 37)(font "Arial" ))
+		(text "LEDR[7..0]" (rect 173 27 228 37)(font "Arial" ))
 		(line (pt 240 32)(pt 224 32)(line_width 3))
 	)
 	(drawing
 		(rectangle (rect 16 16 224 160))
+	)
+)
+(symbol
+	(rect 72 424 200 504)
+	(text "Base_rate" (rect 5 0 54 10)(font "Arial" ))
+	(text "inst1" (rect 8 64 30 76)(font "Intel Clear" ))
+	(port
+		(pt 128 32)
+		(output)
+		(text "Q[7..0]" (rect 0 0 34 10)(font "Arial" ))
+		(text "Q[7..0]" (rect 79 27 113 37)(font "Arial" ))
+		(line (pt 128 32)(pt 112 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 112 64))
 	)
 )
 (connector
@@ -425,53 +440,6 @@ on the Quartus Prime software download page.
 	(bus)
 )
 (connector
-	(pt 360 464)
-	(pt 360 496)
-	(bus)
-)
-(connector
-	(pt 360 496)
-	(pt 360 512)
-	(bus)
-)
-(connector
-	(pt 360 512)
-	(pt 360 528)
-	(bus)
-)
-(connector
-	(pt 304 496)
-	(pt 320 496)
-)
-(connector
-	(pt 320 496)
-	(pt 360 496)
-)
-(connector
-	(pt 304 512)
-	(pt 320 512)
-)
-(connector
-	(pt 320 512)
-	(pt 360 512)
-)
-(connector
-	(pt 304 528)
-	(pt 320 528)
-)
-(connector
-	(pt 320 528)
-	(pt 360 528)
-)
-(connector
-	(pt 304 544)
-	(pt 320 544)
-)
-(connector
-	(pt 320 544)
-	(pt 360 544)
-)
-(connector
 	(pt 320 352)
 	(pt 560 352)
 )
@@ -486,17 +454,6 @@ on the Quartus Prime software download page.
 (connector
 	(pt 320 400)
 	(pt 560 400)
-)
-(connector
-	(pt 360 528)
-	(pt 360 544)
-	(bus)
-)
-(connector
-	(text "sw_bus[3..0]" (rect 498 464 557 476)(font "Intel Clear" ))
-	(pt 560 464)
-	(pt 360 464)
-	(bus)
 )
 (connector
 	(pt 856 264)
@@ -514,9 +471,79 @@ on the Quartus Prime software download page.
 	(pt 856 352)
 	(bus)
 )
-(junction (pt 360 496))
-(junction (pt 360 512))
-(junction (pt 360 528))
+(connector
+	(text "sw_bus[3..0]" (rect 498 464 557 476)(font "Intel Clear" ))
+	(pt 560 464)
+	(pt 360 464)
+	(bus)
+)
+(connector
+	(pt 360 464)
+	(pt 360 544)
+	(bus)
+)
+(connector
+	(pt 360 544)
+	(pt 360 560)
+	(bus)
+)
+(connector
+	(pt 360 560)
+	(pt 360 576)
+	(bus)
+)
+(connector
+	(pt 360 576)
+	(pt 360 592)
+	(bus)
+)
+(connector
+	(pt 304 560)
+	(pt 320 560)
+)
+(connector
+	(pt 320 560)
+	(pt 360 560)
+)
+(connector
+	(pt 304 576)
+	(pt 320 576)
+)
+(connector
+	(pt 320 576)
+	(pt 360 576)
+)
+(connector
+	(pt 304 592)
+	(pt 320 592)
+)
+(connector
+	(pt 320 592)
+	(pt 360 592)
+)
+(connector
+	(pt 304 544)
+	(pt 320 544)
+)
+(connector
+	(pt 320 544)
+	(pt 360 544)
+)
+(connector
+	(pt 208 456)
+	(pt 208 432)
+	(bus)
+)
+(connector
+	(pt 200 456)
+	(pt 208 456)
+	(bus)
+)
+(connector
+	(pt 208 432)
+	(pt 560 432)
+	(bus)
+)
 (junction (pt 856 184))
 (junction (pt 856 200))
 (junction (pt 856 216))
@@ -524,7 +551,10 @@ on the Quartus Prime software download page.
 (junction (pt 856 248))
 (junction (pt 856 264))
 (junction (pt 856 280))
-(junction (pt 320 496))
-(junction (pt 320 512))
-(junction (pt 320 528))
 (junction (pt 320 544))
+(junction (pt 360 544))
+(junction (pt 360 560))
+(junction (pt 360 576))
+(junction (pt 320 560))
+(junction (pt 320 576))
+(junction (pt 320 592))

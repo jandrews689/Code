@@ -449,3 +449,14 @@ base_rate_4I_4R[31] => Mult1.IN64
 Q <= counter_Q.DB_MAX_OUTPUT_PORT_TYPE
 
 
+|TopLevelSchematic|Base_rate:inst1
+Q[0] <= <GND>
+Q[1] <= <GND>
+Q[2] <= <GND>
+Q[3] <= <GND>
+Q[4] <= <GND>
+Q[5] <= <VCC>
+Q[6] <= <GND>
+Q[7] <= <GND>
+
+

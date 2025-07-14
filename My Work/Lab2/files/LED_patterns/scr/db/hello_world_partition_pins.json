@@ -34,10 +34,6 @@
 				{
 					"name" : "reset",
 					"strict" : false
-				},
-				{
-					"name" : "PB",
-					"strict" : false
 				}
 			]
 		}

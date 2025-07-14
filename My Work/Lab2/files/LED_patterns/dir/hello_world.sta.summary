@@ -2,132 +2,132 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1100mV 85C Model Setup 'LED_Patterns:inst|button_conditioner:u1_button_conditioner|one_pulse:u2_one_pulse|current_state.S_PULSE_H'
-Slack : -4.262
-TNS   : -4.262
-
 Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
-Slack : -3.723
-TNS   : -216.469
+Slack : -3.807
+TNS   : -159.809
+
+Type  : Slow 1100mV 85C Model Setup 'LED_Patterns:inst|current_state'
+Slack : -3.629
+TNS   : -3.629
 
 Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
-Slack : 0.312
+Slack : 0.369
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Hold 'LED_Patterns:inst|button_conditioner:u1_button_conditioner|one_pulse:u2_one_pulse|current_state.S_PULSE_H'
-Slack : 3.559
+Type  : Slow 1100mV 85C Model Hold 'LED_Patterns:inst|current_state'
+Slack : 2.789
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Recovery 'CLOCK_50'
-Slack : -0.762
-TNS   : -5.318
+Slack : -2.771
+TNS   : -16.614
 
 Type  : Slow 1100mV 85C Model Removal 'CLOCK_50'
-Slack : 0.791
+Slack : 1.199
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -0.394
-TNS   : -82.755
+TNS   : -57.064
 
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'LED_Patterns:inst|button_conditioner:u1_button_conditioner|one_pulse:u2_one_pulse|current_state.S_PULSE_H'
-Slack : 0.414
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'LED_Patterns:inst|current_state'
+Slack : 0.448
 TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Setup 'LED_Patterns:inst|button_conditioner:u1_button_conditioner|one_pulse:u2_one_pulse|current_state.S_PULSE_H'
-Slack : -4.340
-TNS   : -4.340
 
 Type  : Slow 1100mV 0C Model Setup 'CLOCK_50'
-Slack : -3.623
-TNS   : -209.000
+Slack : -3.700
+TNS   : -152.677
+
+Type  : Slow 1100mV 0C Model Setup 'LED_Patterns:inst|current_state'
+Slack : -3.658
+TNS   : -3.658
 
 Type  : Slow 1100mV 0C Model Hold 'CLOCK_50'
-Slack : 0.084
+Slack : 0.369
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Hold 'LED_Patterns:inst|button_conditioner:u1_button_conditioner|one_pulse:u2_one_pulse|current_state.S_PULSE_H'
-Slack : 3.598
+Type  : Slow 1100mV 0C Model Hold 'LED_Patterns:inst|current_state'
+Slack : 2.792
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Recovery 'CLOCK_50'
-Slack : -0.751
-TNS   : -5.243
+Slack : -2.538
+TNS   : -15.216
 
 Type  : Slow 1100mV 0C Model Removal 'CLOCK_50'
-Slack : 0.731
+Slack : 0.982
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -0.394
-TNS   : -74.911
+TNS   : -51.587
 
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'LED_Patterns:inst|button_conditioner:u1_button_conditioner|one_pulse:u2_one_pulse|current_state.S_PULSE_H'
-Slack : 0.418
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'LED_Patterns:inst|current_state'
+Slack : 0.440
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
-Slack : -2.117
-TNS   : -94.286
+Slack : -2.608
+TNS   : -99.471
 
-Type  : Fast 1100mV 85C Model Setup 'LED_Patterns:inst|button_conditioner:u1_button_conditioner|one_pulse:u2_one_pulse|current_state.S_PULSE_H'
-Slack : -2.015
-TNS   : -2.015
+Type  : Fast 1100mV 85C Model Setup 'LED_Patterns:inst|current_state'
+Slack : -1.456
+TNS   : -1.456
 
 Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
-Slack : 0.185
+Slack : 0.199
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Hold 'LED_Patterns:inst|button_conditioner:u1_button_conditioner|one_pulse:u2_one_pulse|current_state.S_PULSE_H'
-Slack : 2.082
+Type  : Fast 1100mV 85C Model Hold 'LED_Patterns:inst|current_state'
+Slack : 1.468
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Recovery 'CLOCK_50'
-Slack : 0.056
-TNS   : 0.000
+Slack : -1.915
+TNS   : -11.487
 
 Type  : Fast 1100mV 85C Model Removal 'CLOCK_50'
-Slack : 0.449
+Slack : 0.943
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
-Slack : -0.402
-TNS   : -54.824
+Slack : -0.401
+TNS   : -37.786
 
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'LED_Patterns:inst|button_conditioner:u1_button_conditioner|one_pulse:u2_one_pulse|current_state.S_PULSE_H'
-Slack : 0.457
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'LED_Patterns:inst|current_state'
+Slack : 0.479
 TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Setup 'LED_Patterns:inst|button_conditioner:u1_button_conditioner|one_pulse:u2_one_pulse|current_state.S_PULSE_H'
-Slack : -1.931
-TNS   : -1.931
 
 Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
-Slack : -1.636
-TNS   : -79.231
+Slack : -2.030
+TNS   : -75.307
+
+Type  : Fast 1100mV 0C Model Setup 'LED_Patterns:inst|current_state'
+Slack : -1.356
+TNS   : -1.356
 
 Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
-Slack : 0.166
+Slack : 0.188
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Hold 'LED_Patterns:inst|button_conditioner:u1_button_conditioner|one_pulse:u2_one_pulse|current_state.S_PULSE_H'
-Slack : 2.021
+Type  : Fast 1100mV 0C Model Hold 'LED_Patterns:inst|current_state'
+Slack : 1.403
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Recovery 'CLOCK_50'
-Slack : 0.107
-TNS   : 0.000
+Slack : -1.448
+TNS   : -8.685
 
 Type  : Fast 1100mV 0C Model Removal 'CLOCK_50'
-Slack : 0.403
+Slack : 0.718
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
-Slack : -0.440
-TNS   : -65.771
+Slack : -0.439
+TNS   : -45.299
 
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'LED_Patterns:inst|button_conditioner:u1_button_conditioner|one_pulse:u2_one_pulse|current_state.S_PULSE_H'
-Slack : 0.458
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'LED_Patterns:inst|current_state'
+Slack : 0.477
 TNS   : 0.000
 
 ------------------------------------------------------------
