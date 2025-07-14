@@ -1,0 +1,10 @@
+BEGIN 2:1:logic:button_conditioner:work
+    counter :  2:1:logic:button_conditioner_tb:work
+
+    debounced :  2:1:logic:button_conditioner_tb:work
+
+    current_state :  2:1:logic:button_conditioner_tb:work
+
+    stored_value :  2:1:logic:button_conditioner_tb:work
+
+END 

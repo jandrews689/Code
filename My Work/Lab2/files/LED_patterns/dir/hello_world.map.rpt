@@ -1,0 +1,477 @@
+Analysis & Synthesis report for hello_world
+Tue Jul  8 11:44:27 2025
+Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis DSP Block Usage Summary
+  9. State Machine - |TopLevelSchematic|LED_Patterns:inst|led_right_shift:u2_led_right_shift|current_state
+ 10. State Machine - |TopLevelSchematic|LED_Patterns:inst|button_conditioner:u1_button_conditioner|one_pulse:u2_one_pulse|current_state
+ 11. User-Specified and Inferred Latches
+ 12. Registers Removed During Synthesis
+ 13. Removed Registers Triggering Further Register Optimizations
+ 14. General Register Statistics
+ 15. Inverted Register Statistics
+ 16. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 17. Port Connectivity Checks: "LED_Patterns:inst|led_right_shift:u2_led_right_shift|custom_counter_2sec_4I_4R:u1_counter"
+ 18. Post-Synthesis Netlist Statistics for Top Partition
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2025  Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Altera and sold by Altera or its authorized distributors.  Please
+refer to the Altera Software License Subscription Agreements 
+on the Quartus Prime software download page.
+
+
+
++-----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                      ;
++---------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Tue Jul  8 11:44:27 2025           ;
+; Quartus Prime Version           ; 24.1std.0 Build 1077 03/04/2025 SC Lite Edition ;
+; Revision Name                   ; hello_world                                     ;
+; Top-level Entity Name           ; TopLevelSchematic                               ;
+; Family                          ; Cyclone V                                       ;
+; Logic utilization (in ALMs)     ; N/A                                             ;
+; Total registers                 ; 118                                             ;
+; Total pins                      ; 16                                              ;
+; Total virtual pins              ; 0                                               ;
+; Total block memory bits         ; 0                                               ;
+; Total DSP Blocks                ; 5                                               ;
+; Total HSSI RX PCSs              ; 0                                               ;
+; Total HSSI PMA RX Deserializers ; 0                                               ;
+; Total HSSI TX PCSs              ; 0                                               ;
+; Total HSSI PMA TX Serializers   ; 0                                               ;
+; Total PLLs                      ; 0                                               ;
+; Total DLLs                      ; 0                                               ;
++---------------------------------+-------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; TopLevelSchematic  ; hello_world        ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 24          ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 16          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-16        ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                        ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                              ; Library ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------+---------+
+; custom_counter_2sec_4I_4R.vhd    ; yes             ; User VHDL File                     ; C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/custom_counter_2sec_4I_4R.vhd ;         ;
+; TopLevelSchematic.bdf            ; yes             ; User Block Diagram/Schematic File  ; C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/TopLevelSchematic.bdf         ;         ;
+; one_pulse.vhd                    ; yes             ; User VHDL File                     ; C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/one_pulse.vhd                 ;         ;
+; led_right_shift.vhd              ; yes             ; User VHDL File                     ; C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/led_right_shift.vhd           ;         ;
+; LED_patterns.vhd                 ; yes             ; User VHDL File                     ; C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd              ;         ;
+; button_conditioner.vhd           ; yes             ; User VHDL File                     ; C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/button_conditioner.vhd        ;         ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimate of Logic utilization (ALMs needed) ; 90             ;
+;                                             ;                ;
+; Combinational ALUT usage for logic          ; 149            ;
+;     -- 7 input functions                    ; 0              ;
+;     -- 6 input functions                    ; 26             ;
+;     -- 5 input functions                    ; 3              ;
+;     -- 4 input functions                    ; 13             ;
+;     -- <=3 input functions                  ; 107            ;
+;                                             ;                ;
+; Dedicated logic registers                   ; 118            ;
+;                                             ;                ;
+; I/O pins                                    ; 16             ;
+;                                             ;                ;
+; Total DSP Blocks                            ; 5              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 118            ;
+; Total fan-out                               ; 919            ;
+; Average fan-out                             ; 3.02           ;
++---------------------------------------------+----------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                 ;
++--------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------+---------------------------+--------------+
+; Compilation Hierarchy Node                       ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                          ; Entity Name               ; Library Name ;
++--------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------+---------------------------+--------------+
+; |TopLevelSchematic                               ; 149 (0)             ; 118 (0)                   ; 0                 ; 5          ; 16   ; 0            ; |TopLevelSchematic                                                                                           ; TopLevelSchematic         ; work         ;
+;    |LED_Patterns:inst|                           ; 149 (2)             ; 118 (2)                   ; 0                 ; 5          ; 0    ; 0            ; |TopLevelSchematic|LED_Patterns:inst                                                                         ; LED_Patterns              ; work         ;
+;       |button_conditioner:u1_button_conditioner| ; 35 (32)             ; 33 (28)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevelSchematic|LED_Patterns:inst|button_conditioner:u1_button_conditioner                                ; button_conditioner        ; work         ;
+;          |one_pulse:u2_one_pulse|                ; 3 (3)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevelSchematic|LED_Patterns:inst|button_conditioner:u1_button_conditioner|one_pulse:u2_one_pulse         ; one_pulse                 ; work         ;
+;       |led_right_shift:u2_led_right_shift|       ; 112 (6)             ; 83 (18)                   ; 0                 ; 5          ; 0    ; 0            ; |TopLevelSchematic|LED_Patterns:inst|led_right_shift:u2_led_right_shift                                      ; led_right_shift           ; work         ;
+;          |custom_counter_2sec_4I_4R:u1_counter|  ; 106 (106)           ; 65 (65)                   ; 0                 ; 5          ; 0    ; 0            ; |TopLevelSchematic|LED_Patterns:inst|led_right_shift:u2_led_right_shift|custom_counter_2sec_4I_4R:u1_counter ; custom_counter_2sec_4I_4R ; work         ;
++--------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------+---------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary  ;
++---------------------------------+-------------+
+; Statistic                       ; Number Used ;
++---------------------------------+-------------+
+; Two Independent 18x18           ; 2           ;
+; Sum of two 18x18                ; 2           ;
+; Independent 27x27               ; 1           ;
+; Total number of DSP blocks      ; 5           ;
+;                                 ;             ;
+; Fixed Point Unsigned Multiplier ; 7           ;
++---------------------------------+-------------+
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |TopLevelSchematic|LED_Patterns:inst|led_right_shift:u2_led_right_shift|current_state                              ;
++------------------+------------------+------------------+------------------+------------------+------------------+------------------+
+; Name             ; current_state.S5 ; current_state.S4 ; current_state.S3 ; current_state.S2 ; current_state.S1 ; current_state.S0 ;
++------------------+------------------+------------------+------------------+------------------+------------------+------------------+
+; current_state.S0 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ;
+; current_state.S1 ; 0                ; 0                ; 0                ; 0                ; 1                ; 1                ;
+; current_state.S2 ; 0                ; 0                ; 0                ; 1                ; 0                ; 1                ;
+; current_state.S3 ; 0                ; 0                ; 1                ; 0                ; 0                ; 1                ;
+; current_state.S4 ; 0                ; 1                ; 0                ; 0                ; 0                ; 1                ;
+; current_state.S5 ; 1                ; 0                ; 0                ; 0                ; 0                ; 1                ;
++------------------+------------------+------------------+------------------+------------------+------------------+------------------+
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |TopLevelSchematic|LED_Patterns:inst|button_conditioner:u1_button_conditioner|one_pulse:u2_one_pulse|current_state ;
++-------------------------+-------------------------+-------------------------+------------------------------------------------------+
+; Name                    ; current_state.S_PULSE_L ; current_state.S_PULSE_H ; current_state.S_IDLE                                 ;
++-------------------------+-------------------------+-------------------------+------------------------------------------------------+
+; current_state.S_IDLE    ; 0                       ; 0                       ; 0                                                    ;
+; current_state.S_PULSE_H ; 0                       ; 1                       ; 1                                                    ;
+; current_state.S_PULSE_L ; 1                       ; 0                       ; 1                                                    ;
++-------------------------+-------------------------+-------------------------+------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                                                                                     ;
++----------------------------------------------------+-----------------------------------------------------------------------------------------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal                                                                                       ; Free of Timing Hazards ;
++----------------------------------------------------+-----------------------------------------------------------------------------------------------------------+------------------------+
+; LED_Patterns:inst|next_state                       ; LED_Patterns:inst|button_conditioner:u1_button_conditioner|one_pulse:u2_one_pulse|current_state.S_PULSE_H ; yes                    ;
+; Number of user-specified and inferred latches = 1  ;                                                                                                           ;                        ;
++----------------------------------------------------+-----------------------------------------------------------------------------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                          ;
++--------------------------------------------------------------------+----------------------------------------+
+; Register name                                                      ; Reason for Removal                     ;
++--------------------------------------------------------------------+----------------------------------------+
+; LED_Patterns:inst|led_right_shift:u2_led_right_shift|led_output[6] ; Stuck at GND due to stuck port data_in ;
+; LED_Patterns:inst|led_right_shift:u2_led_right_shift|LEDR[6]       ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 2                              ;                                        ;
++--------------------------------------------------------------------+----------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                   ;
++--------------------------------------------------------------------+---------------------------+--------------------------------------------------------------+
+; Register name                                                      ; Reason for Removal        ; Registers Removed due to This Register                       ;
++--------------------------------------------------------------------+---------------------------+--------------------------------------------------------------+
+; LED_Patterns:inst|led_right_shift:u2_led_right_shift|led_output[6] ; Stuck at GND              ; LED_Patterns:inst|led_right_shift:u2_led_right_shift|LEDR[6] ;
+;                                                                    ; due to stuck port data_in ;                                                              ;
++--------------------------------------------------------------------+---------------------------+--------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 118   ;
+; Number of registers using Synchronous Clear  ; 56    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 37    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 76    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; LED_Patterns:inst|current_state        ; 6       ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------------+
+; 3:1                ; 23 bits   ; 46 LEs        ; 0 LEs                ; 46 LEs                 ; Yes        ; |TopLevelSchematic|LED_Patterns:inst|button_conditioner:u1_button_conditioner|counter[21]                                ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevelSchematic|LED_Patterns:inst|led_right_shift:u2_led_right_shift|custom_counter_2sec_4I_4R:u1_counter|counter[16] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "LED_Patterns:inst|led_right_shift:u2_led_right_shift|custom_counter_2sec_4I_4R:u1_counter" ;
++------------------------+-------+----------+---------------------------------------------------------------------------+
+; Port                   ; Type  ; Severity ; Details                                                                   ;
++------------------------+-------+----------+---------------------------------------------------------------------------+
+; clk_freq_mhz[5..4]     ; Input ; Info     ; Stuck at VCC                                                              ;
+; clk_freq_mhz[31..6]    ; Input ; Info     ; Stuck at GND                                                              ;
+; clk_freq_mhz[3..2]     ; Input ; Info     ; Stuck at GND                                                              ;
+; clk_freq_mhz[1]        ; Input ; Info     ; Stuck at VCC                                                              ;
+; clk_freq_mhz[0]        ; Input ; Info     ; Stuck at GND                                                              ;
+; base_rate_4i_4r[31..8] ; Input ; Info     ; Stuck at GND                                                              ;
++------------------------+-------+----------+---------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 118                         ;
+;     CLR               ; 8                           ;
+;     CLR SCLR          ; 23                          ;
+;     ENA               ; 38                          ;
+;     ENA CLR           ; 6                           ;
+;     ENA SCLR          ; 32                          ;
+;     SCLR              ; 1                           ;
+;     plain             ; 10                          ;
+; arriav_lcell_comb     ; 150                         ;
+;     arith             ; 69                          ;
+;         1 data inputs ; 55                          ;
+;         2 data inputs ; 14                          ;
+;     normal            ; 63                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 9                           ;
+;         3 data inputs ; 7                           ;
+;         4 data inputs ; 13                          ;
+;         5 data inputs ; 3                           ;
+;         6 data inputs ; 26                          ;
+;     shared            ; 18                          ;
+;         2 data inputs ; 9                           ;
+;         3 data inputs ; 9                           ;
+; arriav_mac            ; 5                           ;
+; boundary_port         ; 16                          ;
+;                       ;                             ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 2.58                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
+    Info: Processing started: Tue Jul  8 11:44:21 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off hello_world -c hello_world
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20032): Parallel compilation is enabled and will use up to 16 processors
+Info (12021): Found 2 design units, including 1 entities, in source file custom_counter_2sec_4i_4r.vhd
+    Info (12022): Found design unit 1: custom_counter_2sec_4I_4R-logic File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/custom_counter_2sec_4I_4R.vhd Line: 16
+    Info (12023): Found entity 1: custom_counter_2sec_4I_4R File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/custom_counter_2sec_4I_4R.vhd Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file toplevelschematic.bdf
+    Info (12023): Found entity 1: TopLevelSchematic
+Info (12021): Found 2 design units, including 1 entities, in source file one_pulse.vhd
+    Info (12022): Found design unit 1: one_pulse-logic File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/one_pulse.vhd Line: 19
+    Info (12023): Found entity 1: one_pulse File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/one_pulse.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file led_right_shift.vhd
+    Info (12022): Found design unit 1: led_right_shift-logic File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/led_right_shift.vhd Line: 15
+    Info (12023): Found entity 1: led_right_shift File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/led_right_shift.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file led_patterns.vhd
+    Info (12022): Found design unit 1: LED_Patterns-my_architecture File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 20
+    Info (12023): Found entity 1: LED_Patterns File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file button_conditioner.vhd
+    Info (12022): Found design unit 1: button_conditioner-logic File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/button_conditioner.vhd Line: 15
+    Info (12023): Found entity 1: button_conditioner File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/button_conditioner.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/jandr/git/adsd/my work/lab2/files/led_patterns/tb/one_pulse_tb.vhd
+    Info (12022): Found design unit 1: one_pulse_tb-logic File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/tb/one_pulse_tb.vhd Line: 8
+    Info (12023): Found entity 1: one_pulse_tb File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/tb/one_pulse_tb.vhd Line: 5
+Info (12127): Elaborating entity "TopLevelSchematic" for the top level hierarchy
+Warning (275009): Pin "SW" not connected
+Info (12128): Elaborating entity "LED_Patterns" for hierarchy "LED_Patterns:inst"
+Warning (10036): Verilog HDL or VHDL warning at LED_patterns.vhd(25): object "led_enable_shift_left" assigned a value but never read File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 25
+Warning (10492): VHDL Process Statement warning at LED_patterns.vhd(58): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 58
+Warning (10492): VHDL Process Statement warning at LED_patterns.vhd(75): signal "current_state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 75
+Warning (10492): VHDL Process Statement warning at LED_patterns.vhd(78): signal "led_enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 78
+Warning (10492): VHDL Process Statement warning at LED_patterns.vhd(79): signal "led_enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 79
+Warning (10492): VHDL Process Statement warning at LED_patterns.vhd(82): signal "led_enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 82
+Warning (10492): VHDL Process Statement warning at LED_patterns.vhd(83): signal "led_enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 83
+Warning (10492): VHDL Process Statement warning at LED_patterns.vhd(87): signal "LEDR_pattern" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 87
+Warning (10492): VHDL Process Statement warning at LED_patterns.vhd(97): signal "PB_signal" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 97
+Warning (10492): VHDL Process Statement warning at LED_patterns.vhd(101): signal "PB_signal" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 101
+Warning (10631): VHDL Process Statement warning at LED_patterns.vhd(93): inferring latch(es) for signal or variable "next_state", which holds its previous value in one or more paths through the process File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 93
+Warning (10873): Using initial value X (don't care) for net "LEDR[7]" at LED_patterns.vhd(16) File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 16
+Info (10041): Inferred latch for "next_state" at LED_patterns.vhd(93) File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 93
+Info (12128): Elaborating entity "button_conditioner" for hierarchy "LED_Patterns:inst|button_conditioner:u1_button_conditioner" File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 38
+Info (12128): Elaborating entity "one_pulse" for hierarchy "LED_Patterns:inst|button_conditioner:u1_button_conditioner|one_pulse:u2_one_pulse" File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/button_conditioner.vhd Line: 29
+Info (12128): Elaborating entity "led_right_shift" for hierarchy "LED_Patterns:inst|led_right_shift:u2_led_right_shift" File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 46
+Info (12128): Elaborating entity "custom_counter_2sec_4I_4R" for hierarchy "LED_Patterns:inst|led_right_shift:u2_led_right_shift|custom_counter_2sec_4I_4R:u1_counter" File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/led_right_shift.vhd Line: 26
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LEDR[7]" is stuck at GND
+    Warning (13410): Pin "LEDR[6]" is stuck at GND
+Info (286030): Timing-Driven Synthesis is running
+Critical Warning (18061): Ignored Power-Up Level option on the following registers
+    Critical Warning (18010): Register LED_Patterns:inst|current_state will power up to High File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 34
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 5 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "HPS_LED_control"
+    Warning (15610): No output dependent on input pin "SW[3]"
+    Warning (15610): No output dependent on input pin "SW[2]"
+    Warning (15610): No output dependent on input pin "SW[1]"
+    Warning (15610): No output dependent on input pin "SW[0]"
+Info (21057): Implemented 204 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 8 input pins
+    Info (21059): Implemented 8 output pins
+    Info (21061): Implemented 183 logic cells
+    Info (21062): Implemented 5 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 25 warnings
+    Info: Peak virtual memory: 4983 megabytes
+    Info: Processing ended: Tue Jul  8 11:44:27 2025
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:14
+
+

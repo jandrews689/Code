@@ -1,0 +1,6 @@
+
+State Machine - |TopLevelSchematic|LED_Patterns:inst|button_conditioner:u1_button_conditioner|one_pulse:u2_one_pulse|current_state
+Name current_state.S_PULSE_L current_state.S_PULSE_H current_state.S_IDLE 
+current_state.S_IDLE 0 0 0 
+current_state.S_PULSE_H 0 1 1 
+current_state.S_PULSE_L 1 0 1 

@@ -1,0 +1,28 @@
+library IEEE;
+use IEEE.std_logic_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity LED_Patterns is
+	port(
+        clk                 : in std_logic;                     -- System clock
+        reset               : in std_logic;                     -- System reset 
+        PB                  : in std_logic;                     -- Pushbutton to change state
+        SW                  : in std_logic_vector(3 downto 0);  -- Switches to determine state
+        HPS_LED_control     : in std_logic;                     -- Hardware/software control 0/1
+        SYS_CLKs_sec        : in std_logic_vector(31 downto 0); -- Number of system clock cycles in one second
+        Base_rate           : in std_logic_vector(7 downto 0);  -- Base transistion period in seconds, fixed-point data type (W=8, F=4)
+        LED_reg             : in std_logic_vector(7 downto 0);  -- LED register
+        LED                 : in std_logic_vector(7 downto 0)   -- LEDs on the board
+    );
+end entity LED_Patterns;
+
+architecture my_architecture of LED_Patterns is
+
+    -- signal declarations
+    -- component declarations
+
+begin
+
+    -- concurrent statements
+
+end my_architecture;

@@ -1,0 +1,77 @@
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.ALL;
+USE IEEE.NUMERIC_STD.ALL;
+
+entity one_pulse_tb is
+end entity;
+
+architecture logic of one_pulse_tb is
+    -- signals and initial values. 
+    signal clk : std_logic := '0';
+    signal reset : std_logic := '0';
+    signal input : std_logic := '0';
+    signal Q : std_logic;
+
+    -- components
+    component one_pulse is
+        port (
+            -- clk
+            -- reset
+            -- input
+            -- Q
+            clk         : in std_logic;
+            reset       : in std_logic;
+            input       : in std_logic;
+            Q           : out std_logic
+        );
+    
+    end component one_pulse;
+
+    begin 
+    -- port map 
+    uut : one_pulse 
+        port map (
+            clk => clk,
+            reset => reset,
+            input => input,
+            Q => Q
+        );
+
+    
+    clk_process: process
+    begin
+        while true loop
+            clk <= '0';
+            wait for 10 ns;
+            clk <= '1';
+            wait for 10 ns;
+        end loop;
+    end process;
+
+
+    stim_process: process
+    begin
+        -- reset stimulus
+        reset <= '1';
+        wait for 20 ns;
+        reset <= '0';
+        wait for 40 ns;
+    
+        -- input stimulus
+        input <= '1';
+        wait for 100 ns;
+        input <= '0';
+        wait for 40 ns;
+
+        -- reset during input stimulus
+        input <= '1';
+        wait for 30 ns;
+        reset <= '1';
+        wait for 30 ns;
+
+        -- end simulation
+        wait;
+        report "Q = " & std_logic'image(Q);
+    end process;
+end logic;
+

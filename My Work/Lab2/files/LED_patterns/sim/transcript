@@ -1,0 +1,416 @@
+# Compile of custom_counter_2sec_4I_4R_tb.vhd failed with 7 errors.
+# Compile of custom_counter_2sec_4I_4R.vhd failed with 1 errors.
+# 2 compiles, 2 failed with 8 errors.
+# Compile of custom_counter_2sec_4I_4R_tb.vhd failed with 3 errors.
+# Compile of custom_counter_2sec_4I_4R.vhd failed with 1 errors.
+# 2 compiles, 2 failed with 4 errors.
+# Compile of custom_counter_2sec_4I_4R_tb.vhd failed with 1 errors.
+# Compile of custom_counter_2sec_4I_4R.vhd was successful with warnings.
+# 2 compiles, 1 failed with 1 error.
+# Compile of custom_counter_2sec_4I_4R_tb.vhd was successful.
+# Compile of custom_counter_2sec_4I_4R.vhd was successful with warnings.
+# 2 compiles, 0 failed with no errors.
+vsim work.custom_counter_2sec_4i_4r_tb
+# vsim work.custom_counter_2sec_4i_4r_tb 
+# Start time: 09:46:24 on Jul 08,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.custom_counter_2sec_4i_4r_tb(logic)#1
+add wave -position insertpoint  \
+sim:/custom_counter_2sec_4i_4r_tb/clk \
+sim:/custom_counter_2sec_4i_4r_tb/reset \
+sim:/custom_counter_2sec_4i_4r_tb/enable \
+sim:/custom_counter_2sec_4i_4r_tb/clk_freq_mhz \
+sim:/custom_counter_2sec_4i_4r_tb/base_rate_4I_4R \
+sim:/custom_counter_2sec_4i_4r_tb/Q
+add wave -position insertpoint  \
+sim:/custom_counter_2sec_4i_4r_tb/uut/counter \
+sim:/custom_counter_2sec_4i_4r_tb/uut/baserate_raw \
+sim:/custom_counter_2sec_4i_4r_tb/uut/counter_Q \
+sim:/custom_counter_2sec_4i_4r_tb/uut/calculate
+run
+# ** Fatal: (vsim-3420) Array lengths do not match. Left is 64 (63 downto 0). Right is 192 (191 downto 0).
+#    Time: 40 ns  Iteration: 1  Process: /custom_counter_2sec_4i_4r_tb/uut/clocked File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/custom_counter_2sec_4I_4R.vhd
+# Fatal error in Subprogram scaled_tick_count at C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/custom_counter_2sec_4I_4R.vhd line 36
+# 
+# HDL call sequence:
+# Stopped at C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/custom_counter_2sec_4I_4R.vhd 36 Subprogram scaled_tick_count
+# called from  C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/custom_counter_2sec_4I_4R.vhd 53 Process clocked
+# 
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+run -all
+# ** Fatal: (vsim-3420) Array lengths do not match. Left is 64 (63 downto 0). Right is 192 (191 downto 0).
+#    Time: 40 ns  Iteration: 1  Process: /custom_counter_2sec_4i_4r_tb/uut/clocked File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/custom_counter_2sec_4I_4R.vhd
+# Fatal error in Subprogram scaled_tick_count at C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/custom_counter_2sec_4I_4R.vhd line 36
+# 
+# HDL call sequence:
+# Stopped at C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/custom_counter_2sec_4I_4R.vhd 36 Subprogram scaled_tick_count
+# called from  C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/custom_counter_2sec_4I_4R.vhd 53 Process clocked
+# 
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# Compile of custom_counter_2sec_4I_4R_tb.vhd was successful.
+# Compile of custom_counter_2sec_4I_4R.vhd was successful with warnings.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.custom_counter_2sec_4i_4r_tb(logic)#1
+run
+# ** Fatal: (vsim-3420) Array lengths do not match. Left is 64 (63 downto 0). Right is 192 (191 downto 0).
+#    Time: 40 ns  Iteration: 1  Process: /custom_counter_2sec_4i_4r_tb/uut/clocked File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/custom_counter_2sec_4I_4R.vhd
+# Fatal error in Subprogram scaled_tick_count at C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/custom_counter_2sec_4I_4R.vhd line 36
+# 
+# HDL call sequence:
+# Stopped at C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/custom_counter_2sec_4I_4R.vhd 36 Subprogram scaled_tick_count
+# called from  C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/custom_counter_2sec_4I_4R.vhd 53 Process clocked
+# 
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+restart -f
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+run
+# ** Fatal: (vsim-3420) Array lengths do not match. Left is 64 (63 downto 0). Right is 192 (191 downto 0).
+#    Time: 40 ns  Iteration: 1  Process: /custom_counter_2sec_4i_4r_tb/uut/clocked File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/custom_counter_2sec_4I_4R.vhd
+# Fatal error in Subprogram scaled_tick_count at C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/custom_counter_2sec_4I_4R.vhd line 36
+# 
+# HDL call sequence:
+# Stopped at C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/custom_counter_2sec_4I_4R.vhd 36 Subprogram scaled_tick_count
+# called from  C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/custom_counter_2sec_4I_4R.vhd 53 Process clocked
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/custom_counter_2sec_4I_4R.vhd 36 Subprogram scaled_tick_count
+# called from  C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/custom_counter_2sec_4I_4R.vhd 53 Process clocked
+# 
+# Compile of custom_counter_2sec_4I_4R_tb.vhd was successful.
+# Compile of custom_counter_2sec_4I_4R.vhd was successful with warnings.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+run
+# ** Fatal: (vsim-3420) Array lengths do not match. Left is 64 (63 downto 0). Right is 192 (191 downto 0).
+#    Time: 40 ns  Iteration: 1  Process: /custom_counter_2sec_4i_4r_tb/uut/clocked File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/custom_counter_2sec_4I_4R.vhd
+# Fatal error in Subprogram scaled_tick_count at C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/custom_counter_2sec_4I_4R.vhd line 36
+# 
+# HDL call sequence:
+# Stopped at C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/custom_counter_2sec_4I_4R.vhd 36 Subprogram scaled_tick_count
+# called from  C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/custom_counter_2sec_4I_4R.vhd 53 Process clocked
+# 
+# Compile of custom_counter_2sec_4I_4R_tb.vhd was successful.
+# Compile of custom_counter_2sec_4I_4R.vhd was successful with warnings.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.custom_counter_2sec_4i_4r_tb(logic)#1
+run
+# ** Fatal: (vsim-3420) Array lengths do not match. Left is 128 (127 downto 0). Right is 256 (255 downto 0).
+#    Time: 40 ns  Iteration: 1  Process: /custom_counter_2sec_4i_4r_tb/uut/clocked File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/custom_counter_2sec_4I_4R.vhd
+# Fatal error in Subprogram scaled_tick_count at C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/custom_counter_2sec_4I_4R.vhd line 37
+# 
+# HDL call sequence:
+# Stopped at C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/custom_counter_2sec_4I_4R.vhd 37 Subprogram scaled_tick_count
+# called from  C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/custom_counter_2sec_4I_4R.vhd 56 Process clocked
+# 
+# Compile of custom_counter_2sec_4I_4R_tb.vhd was successful.
+# Compile of custom_counter_2sec_4I_4R.vhd was successful with warnings.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.custom_counter_2sec_4i_4r_tb(logic)#1
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+run
+# ** Fatal: (vsim-3420) Array lengths do not match. Left is 64 (63 downto 0). Right is 128 (127 downto 0).
+#    Time: 40 ns  Iteration: 1  Process: /custom_counter_2sec_4i_4r_tb/uut/clocked File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/custom_counter_2sec_4I_4R.vhd
+# Fatal error in Subprogram scaled_tick_count at C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/custom_counter_2sec_4I_4R.vhd line 37
+# 
+# HDL call sequence:
+# Stopped at C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/custom_counter_2sec_4I_4R.vhd 37 Subprogram scaled_tick_count
+# called from  C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/custom_counter_2sec_4I_4R.vhd 56 Process clocked
+# 
+# Compile of custom_counter_2sec_4I_4R_tb.vhd was successful.
+# Compile of custom_counter_2sec_4I_4R.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.custom_counter_2sec_4i_4r_tb(logic)#1
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+run
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 40 ns  Iteration: 1  Instance: /custom_counter_2sec_4i_4r_tb/uut
+# ** Warning: baserate_raw is 0
+#    Time: 80 ns  Iteration: 0  Instance: /custom_counter_2sec_4i_4r_tb
+# Compile of custom_counter_2sec_4I_4R_tb.vhd was successful.
+# Compile of custom_counter_2sec_4I_4R.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.custom_counter_2sec_4i_4r_tb(logic)#1
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+run
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 40 ns  Iteration: 1  Instance: /custom_counter_2sec_4i_4r_tb/uut
+# ** Warning: baserate_raw is 0
+#    Time: 80 ns  Iteration: 0  Instance: /custom_counter_2sec_4i_4r_tb
+# Compile of custom_counter_2sec_4I_4R_tb.vhd was successful.
+# Compile of custom_counter_2sec_4I_4R.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.custom_counter_2sec_4i_4r_tb(logic)#1
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+run
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 40 ns  Iteration: 1  Instance: /custom_counter_2sec_4i_4r_tb/uut
+# ** Warning: baserate_raw is 0
+#    Time: 80 ns  Iteration: 0  Instance: /custom_counter_2sec_4i_4r_tb
+# Can't move the Now cursor.
+# Compile of custom_counter_2sec_4I_4R_tb.vhd was successful.
+# Compile of custom_counter_2sec_4I_4R.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Error (suppressible): C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/tb/custom_counter_2sec_4I_4R_tb.vhd(49): (vopt-1565) Failed to find 'calculate' in hierarchical name 'uut.calculate'.
+#         Region: /custom_counter_2sec_4I_4R_tb
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=0.
+restart -f
+# No Design Loaded!
+# Compile of custom_counter_2sec_4I_4R_tb.vhd was successful.
+# Compile of custom_counter_2sec_4I_4R.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# No Design Loaded!
+restart -f
+# No Design Loaded!
+vsim work.custom_counter_2sec_4i_4r_tb
+# vsim work.custom_counter_2sec_4i_4r_tb 
+# Start time: 09:46:24 on Jul 08,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error (suppressible): C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/tb/custom_counter_2sec_4I_4R_tb.vhd(49): (vopt-1565) Failed to find 'calculate' in hierarchical name 'uut.calculate'.
+#         Region: /custom_counter_2sec_4I_4R_tb
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=2, Warnings=0.
+# Error loading design
+# End time: 10:09:52 on Jul 08,2025, Elapsed time: 0:23:28
+# Errors: 2, Warnings: 2
+# Compile of custom_counter_2sec_4I_4R_tb.vhd failed with 2 errors.
+# Compile of custom_counter_2sec_4I_4R.vhd was successful.
+# 2 compiles, 1 failed with 2 errors.
+# Compile of custom_counter_2sec_4I_4R_tb.vhd was successful.
+# Compile of custom_counter_2sec_4I_4R.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# No Design Loaded!
+vsim work.custom_counter_2sec_4i_4r_tb
+# vsim work.custom_counter_2sec_4i_4r_tb 
+# Start time: 10:10:59 on Jul 08,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.custom_counter_2sec_4i_4r_tb(logic)#1
+# Warning in wave window restart: ** UI-Msg (Warning): (vish-4014) No objects found matching '/custom_counter_2sec_4i_4r_tb/uut/calculate'. 
+# Compile of custom_counter_2sec_4I_4R_tb.vhd was successful.
+# Compile of custom_counter_2sec_4I_4R.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+quit -sim
+# End time: 10:11:59 on Jul 08,2025, Elapsed time: 0:01:00
+# Errors: 0, Warnings: 4
+vsim work.custom_counter_2sec_4i_4r_tb
+# vsim work.custom_counter_2sec_4i_4r_tb 
+# Start time: 10:12:04 on Jul 08,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.custom_counter_2sec_4i_4r_tb(logic)#1
+add wave -position insertpoint  \
+sim:/custom_counter_2sec_4i_4r_tb/clk \
+sim:/custom_counter_2sec_4i_4r_tb/reset \
+sim:/custom_counter_2sec_4i_4r_tb/enable \
+sim:/custom_counter_2sec_4i_4r_tb/clk_freq_mhz \
+sim:/custom_counter_2sec_4i_4r_tb/base_rate_4I_4R \
+sim:/custom_counter_2sec_4i_4r_tb/Q
+add wave -position insertpoint  \
+sim:/custom_counter_2sec_4i_4r_tb/uut/counter \
+sim:/custom_counter_2sec_4i_4r_tb/uut/baserate_raw \
+sim:/custom_counter_2sec_4i_4r_tb/uut/counter_Q
+run
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 40 ns  Iteration: 1  Instance: /custom_counter_2sec_4i_4r_tb/uut
+# ** Warning: baserate_raw is 0
+#    Time: 60 ns  Iteration: 0  Instance: /custom_counter_2sec_4i_4r_tb
+# Compile of custom_counter_2sec_4I_4R_tb.vhd was successful.
+# Compile of custom_counter_2sec_4I_4R.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.custom_counter_2sec_4i_4r_tb(logic)#1
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+run
+# ** Warning: baserate_raw is 0
+#    Time: 80 ns  Iteration: 0  Instance: /custom_counter_2sec_4i_4r_tb
+# Compile of custom_counter_2sec_4I_4R_tb.vhd was successful.
+# Compile of custom_counter_2sec_4I_4R.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.custom_counter_2sec_4i_4r_tb(logic)#1
+run
+# ** Warning: baserate_raw is 0
+#    Time: 80 ms  Iteration: 0  Instance: /custom_counter_2sec_4i_4r_tb
+# Compile of custom_counter_2sec_4I_4R_tb.vhd was successful.
+# Compile of custom_counter_2sec_4I_4R.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.custom_counter_2sec_4i_4r_tb(logic)#1
+run
+# ** Warning: baserate_raw is 0
+#    Time: 1600 ns  Iteration: 0  Instance: /custom_counter_2sec_4i_4r_tb
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+run
+# ** Warning: baserate_raw is 0
+#    Time: 1600 ns  Iteration: 0  Instance: /custom_counter_2sec_4i_4r_tb
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+run
+# ** Warning: baserate_raw is 0
+#    Time: 1600 ns  Iteration: 0  Instance: /custom_counter_2sec_4i_4r_tb
+# Compile of custom_counter_2sec_4I_4R_tb.vhd was successful.
+# Compile of custom_counter_2sec_4I_4R.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.custom_counter_2sec_4i_4r_tb(logic)#1
+run
+# ** Warning: baserate_raw is 0
+#    Time: 80 ns  Iteration: 0  Instance: /custom_counter_2sec_4i_4r_tb
+# Compile of custom_counter_2sec_4I_4R_tb.vhd was successful.
+# Compile of custom_counter_2sec_4I_4R.vhd was successful with warnings.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.custom_counter_2sec_4i_4r_tb(logic)#1
+restart -f
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+run
+# ** Fatal: (vsim-3420) Array lengths do not match. Left is 64 (63 downto 0). Right is 128 (127 downto 0).
+#    Time: 20 ns  Iteration: 1  Process: /custom_counter_2sec_4i_4r_tb/uut/clocked File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/custom_counter_2sec_4I_4R.vhd
+# Fatal error in Subprogram scaled_tick_count at C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/custom_counter_2sec_4I_4R.vhd line 37
+# 
+# HDL call sequence:
+# Stopped at C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/custom_counter_2sec_4I_4R.vhd 37 Subprogram scaled_tick_count
+# called from  C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/custom_counter_2sec_4I_4R.vhd 53 Process clocked
+# 
+# Compile of custom_counter_2sec_4I_4R_tb.vhd was successful.
+# Compile of custom_counter_2sec_4I_4R.vhd was successful with warnings.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.custom_counter_2sec_4i_4r_tb(logic)#1
+run
+# ** Fatal: (vsim-3420) Array lengths do not match. Left is 64 (63 downto 0). Right is 128 (127 downto 0).
+#    Time: 20 ns  Iteration: 1  Process: /custom_counter_2sec_4i_4r_tb/uut/clocked File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/custom_counter_2sec_4I_4R.vhd
+# Fatal error in Subprogram scaled_tick_count at C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/custom_counter_2sec_4I_4R.vhd line 40
+# 
+# HDL call sequence:
+# Stopped at C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/custom_counter_2sec_4I_4R.vhd 40 Subprogram scaled_tick_count
+# called from  C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/custom_counter_2sec_4I_4R.vhd 53 Process clocked
+# 
+# Compile of custom_counter_2sec_4I_4R_tb.vhd was successful.
+# Compile of custom_counter_2sec_4I_4R.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.custom_counter_2sec_4i_4r_tb(logic)#1
+run
+# ** Warning: baserate_raw is 0
+#    Time: 80 ns  Iteration: 0  Instance: /custom_counter_2sec_4i_4r_tb
+# End time: 11:41:03 on Jul 08,2025, Elapsed time: 1:28:59
+# Errors: 0, Warnings: 1

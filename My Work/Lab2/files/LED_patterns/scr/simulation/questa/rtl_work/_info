@@ -1,0 +1,142 @@
+m255
+K4
+z2
+!s11e vcom 2024.3 2024.09, Sep 10 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/simulation/questa
+Ebutton_conditioner
+Z1 w1751299184
+Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 1
+R0
+Z5 8C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/button_conditioner.vhd
+Z6 FC:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/button_conditioner.vhd
+l0
+L5 1
+VH08kKDXOHDVAE5Q]2iXD73
+!s100 Hn4zUkdk=@ZXh3WaEAXoI2
+Z7 OL;C;2024.3;79
+31
+Z8 !s110 1751373635
+!i10b 1
+Z9 !s108 1751373635.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/button_conditioner.vhd|
+Z11 !s107 C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/button_conditioner.vhd|
+!i113 0
+Z12 o-93 -work work
+Z13 tExplicit 1 CvgOpt 0
+Alogic
+Z14 DEx4 work 9 one_pulse 0 22 EAAof86zY5LhQ0PXXDnKR2
+R2
+R3
+R4
+Z15 DEx4 work 18 button_conditioner 0 22 H08kKDXOHDVAE5Q]2iXD73
+!i122 1
+l27
+L15 92
+VbJ2]MIoKc[T>Gd38B>j7d3
+!s100 E7:BC:bVaLihK?<L28]Ao2
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 0
+R12
+R13
+Eled_patterns
+Z16 w1751299132
+R2
+R3
+R4
+!i122 2
+R0
+Z17 8C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd
+Z18 FC:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd
+l0
+L5 1
+VoJD7CnOV0Zd43W1SXLBON2
+!s100 oU<YDI7NNbSUJHh>8F<ko2
+R7
+31
+R8
+!i10b 1
+R9
+Z19 !s90 -reportprogress|300|-93|-work|work|C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd|
+!s107 C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd|
+!i113 0
+R12
+R13
+Amy_architecture
+R15
+R2
+R3
+R4
+DEx4 work 12 led_patterns 0 22 oJD7CnOV0Zd43W1SXLBON2
+!i122 2
+l26
+L20 23
+VLoXCX^niE@5THSgT[DenH0
+!s100 `Qc1bLlFCZio^So2zE]>11
+R7
+31
+R8
+!i10b 1
+R9
+R19
+Z20 !s107 C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd|
+!i113 0
+R12
+R13
+Eone_pulse
+Z21 w1751298299
+R2
+R3
+R4
+!i122 0
+R0
+Z22 8C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/one_pulse.vhd
+Z23 FC:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/one_pulse.vhd
+l0
+L5 1
+VEAAof86zY5LhQ0PXXDnKR2
+!s100 ?P9`OR3nI:=Ra8=4Q><iL0
+R7
+31
+R8
+!i10b 1
+R9
+Z24 !s90 -reportprogress|300|-93|-work|work|C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/one_pulse.vhd|
+Z25 !s107 C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/one_pulse.vhd|
+!i113 0
+R12
+R13
+Alogic
+R2
+R3
+R4
+R14
+!i122 0
+l27
+L19 67
+V=6d3aEG>:Q4PYg6lOOCMb1
+!s100 E0f=iN`hRb<>Vmdlmln_G2
+R7
+31
+R8
+!i10b 1
+R9
+R24
+R25
+!i113 0
+R12
+R13
