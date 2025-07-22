@@ -5,7 +5,7 @@ USE IEEE.NUMERIC_STD.ALL;
 entity button_conditioner is
     port (
         clk : in std_logic;
-        reset : in std_logic;
+        reset_n : in std_logic;
         SW : in std_logic;
         Q : out std_logic
     );
@@ -29,8 +29,8 @@ begin
     u2_one_pulse : entity work.one_pulse
     port map (
         clk => clk,
-        reset => reset,
-        input => PB_signal,
+        reset_n => reset_n,
+        input_n => PB_signal,
         Q => pulse_signal
 
     );
@@ -46,9 +46,9 @@ begin
     end process;
 
     -- clocked process: clocked processes
-    process(clk, reset)
+    process(clk, reset_n)
     begin
-        if reset = '0' then
+        if reset_n = '0' then
             current_state <= IDLE;
             counter <= (others => '0');
             stored_value <= '0';

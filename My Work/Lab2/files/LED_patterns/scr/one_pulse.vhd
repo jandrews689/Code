@@ -4,13 +4,9 @@ USE IEEE.NUMERIC_STD.ALL;
 
 entity one_pulse is
     port (
-        -- clk
-        -- reset
-        -- PB Signal 
-        -- output
         clk         : in std_logic;
-        reset       : in std_logic;
-        input   : in std_logic;
+        reset_n       : in std_logic;
+        input_n   : in std_logic;
         Q       : out std_logic
     );
 
@@ -18,9 +14,8 @@ end entity one_pulse;
 
 architecture logic of one_pulse is
 
-    signal input_signal : std_logic;
-    signal input_signal_prev : std_logic;
-    -- signal output : std_logic;
+    signal input_signal : std_logic := '1';
+    signal input_signal_prev : std_logic := '1';
     type state_type is (S_IDLE, S_PULSE_H, S_PULSE_L);
     signal current_state, next_state : state_type := S_IDLE;
 
@@ -31,17 +26,20 @@ begin
     begin
         if rising_edge(clk) then
             input_signal_prev <= input_signal;
-            input_signal <= input;
+            input_signal <= input_n;
         end if;
     end process;
 
     -- clocked process
-    process(clk, reset)
+    process(clk, reset_n)
     begin
-        if reset = '0' then
+        if reset_n = '0' then
             -- reset everything
+            input_signal <= '1';
+            input_signal_prev <= '1';
             current_state <= S_IDLE;
         elsif rising_edge(clk) then
+            -- change state
             current_state <= next_state;
         end if;
     end process;
@@ -50,9 +48,8 @@ begin
     process(current_state, input_signal, input_signal_prev) 
     begin
         case current_state is
-
             when S_IDLE =>
-                if input_signal = '1' and input_signal_prev = '0' then
+                if input_signal = '0' and input_signal_prev = '1' then
                     next_state <= S_PULSE_H;
                 else 
                     next_state <= S_IDLE;
@@ -62,7 +59,7 @@ begin
                 next_state <= S_PULSE_L;
 
             when S_PULSE_L =>
-                if input_signal = '0' and input_signal_prev = '1' then
+                if input_signal = '1' and input_signal_prev = '0' then
                     next_state <= S_IDLE;
                 else 
                     next_state <= S_PULSE_L;
