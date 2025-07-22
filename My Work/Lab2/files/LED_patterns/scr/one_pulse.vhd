@@ -38,7 +38,7 @@ begin
     -- clocked process
     process(clk, reset)
     begin
-        if reset = '1' then
+        if reset = '0' then
             -- reset everything
             current_state <= S_IDLE;
         elsif rising_edge(clk) then

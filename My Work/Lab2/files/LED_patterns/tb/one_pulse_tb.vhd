@@ -55,6 +55,8 @@ architecture logic of one_pulse_tb is
         reset <= '1';
         wait for 20 ns;
         reset <= '0';
+        wait for 20 ns;
+        reset <= '1';
         wait for 40 ns;
     
         -- input stimulus
@@ -66,7 +68,7 @@ architecture logic of one_pulse_tb is
         -- reset during input stimulus
         input <= '1';
         wait for 30 ns;
-        reset <= '1';
+        reset <= '0';
         wait for 30 ns;
 
         -- end simulation

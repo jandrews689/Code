@@ -1,6 +1,0 @@
-BEGIN 2:1:logic:led_right_shift:work
-    current_state :  2:1:logic:led_right_shift_tb:work
-
-    counter :  2:1:logic:led_right_shift_tb:work
-
-END 

@@ -48,7 +48,7 @@ begin
     -- clocked process: clocked processes
     process(clk, reset)
     begin
-        if reset = '1' then
+        if reset = '0' then
             current_state <= IDLE;
             counter <= (others => '0');
             stored_value <= '0';

@@ -15,7 +15,7 @@ end entity led_right_shift;
 architecture logic of led_right_shift is
     constant CLK_FREQ_MHZ : integer := 50;
     signal led_output : std_logic_vector(6 downto 0);
-    type state_type is (S0, S1, S2, S3, S4, S5);
+    type state_type is (S0, S1, S2, S3, S4, S5, S6);
     signal current_state, next_state : state_type;
     --signal counter : unsigned(11 downto 0) := (others => '0'); -- this size for overflow protection. 
     --signal base_limit : unsigned(11 downto 0);
@@ -45,7 +45,7 @@ begin
     process(clk, reset, enable)
     begin
         if enable = '1' then
-            if reset = '1' then
+            if reset = '0' then
                 -- reset logic here.
                 current_state <= S0;
             elsif rising_edge(clk) then
@@ -60,18 +60,21 @@ begin
                         led_output <= "0000001";
 
                     when S1 =>
-                        led_output <= "0100000";
+                        led_output <= "1000000";
                         
                     when S2 =>
-                        led_output <= "0010000";
+                        led_output <= "0100000";
                         
                     when S3 =>
-                        led_output <= "0001000";
+                        led_output <= "0010000";
                         
                     when S4 =>
-                        led_output <= "0000100";
+                        led_output <= "0001000";
                         
                     when S5 =>
+                        led_output <= "0000100";
+
+                    when S6 =>
                         led_output <= "0000010";
                         
                     when others =>
@@ -92,7 +95,8 @@ begin
             when S2 => next_state <= S3;
             when S3 => next_state <= S4;
             when S4 => next_state <= S5;
-            when S5 => next_state <= S0;
+            when S5 => next_state <= S6;
+            when S6 => next_State <= S0;
         end case;
     end process;
 

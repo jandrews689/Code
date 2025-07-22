@@ -11,5 +11,5 @@ end entity;
 
 architecture logic of Base_rate is
 begin
-    Q <= "00100000";
+    Q <= "00010000";
 end logic;

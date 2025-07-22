@@ -1,0 +1,19 @@
+{C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/one_pulse.vhd} {1 {vcom -work work -2008 -explicit -vopt -stats=none {C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/one_pulse.vhd}
+Questa Intel Starter FPGA Edition-64 vcom 2024.3 Compiler 2024.09 Sep 10 2024
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity one_pulse
+-- Compiling architecture logic of one_pulse
+
+} {} {}} {C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/tb/one_pulse_tb.vhd} {1 {vcom -work work -2008 -explicit -vopt -stats=none {C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/tb/one_pulse_tb.vhd}
+Questa Intel Starter FPGA Edition-64 vcom 2024.3 Compiler 2024.09 Sep 10 2024
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity one_pulse_tb
+-- Compiling architecture logic of one_pulse_tb
+
+} {} {}}

@@ -1,1 +1,1 @@
-C:/altera/24.1std/questa_fse/win64/VisualizerRls/bin/viscom.exe -nolock -quiet -jmem_size 15679776 work.button_conditioner_tb(logic) -quiet -auto_acc_if_foreign -work work -allow_unnamed -o _opt -id 6-c03532e22915-686b8ffa-129-2b84
+C:/altera/24.1std/questa_fse/win64/VisualizerRls/bin/viscom.exe -nolock -quiet -jmem_size 15679776 work.led_patterns_tb(logic) -quiet -auto_acc_if_foreign -work work +acc -allow_unnamed -o _opt -id 4-c03532e22915-6874db89-a-18c4 +__betafsm

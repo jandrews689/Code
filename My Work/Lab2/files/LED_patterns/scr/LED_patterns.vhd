@@ -12,7 +12,6 @@ entity LED_Patterns is
         Base_rate           : in std_logic_vector(7 downto 0);  -- Base transistion period in seconds, fixed-point data type (W=8, F=4)
         LED_reg             : in std_logic_vector(7 downto 0);  -- LED register
 		SW                  : in std_logic_vector(3 downto 0);  -- Switches to determine state
-		  
         LEDR                 : out std_logic_vector(7 downto 0)  -- LEDs on the board
     );
 end entity LED_Patterns;
@@ -21,10 +20,20 @@ architecture my_architecture of LED_Patterns is
 
     -- signal declarations
 	signal led_enable : std_logic := '0';
+	signal clk_freq_mhz : integer := 50;
+	signal base_rate_4I_4R : unsigned(31 downto 0);
+	
 	signal led_enable_shift_right : std_logic := '0';
 	signal led_enable_shift_left : std_logic := '0';
+	signal LEDR_7 : std_logic := '0';
+
+	signal LEDR_SHR_pattern : std_logic_vector(6 downto 0);
+	signal LEDR_SHL_pattern : std_logic_vector(6 downto 0);
 	signal LEDR_pattern : std_logic_vector(6 downto 0);
 
+	signal counter_Base_rate_Q : std_logic := '0';
+	signal counter_Half_Base_rate_Q : std_logic := '0';
+	signal counter_Quarter_Base_rate_Q : std_logic := '0';
 
 	signal PB_signal : std_logic; 		-- push button output signal from the conditioner
 	signal counter : unsigned(7 downto 0) := (others => '0');
@@ -49,39 +58,76 @@ begin
 			reset => reset,
 			enable => led_enable_shift_right,
 			Base_rate => Base_rate,
-			LEDR => LEDR_pattern --this needs converting to smaller vector size. 
+			LEDR => LEDR_SHR_pattern --this needs converting to smaller vector size. 
+		);
+
+	u3_Counter_Base_rate : entity work.custom_counter_2sec_4I_4R 
+		port map(
+			clk => clk,
+			reset => reset,
+			enable => led_enable,
+			clk_freq_mhz => clk_freq_mhz,
+			base_rate_4I_4R => base_rate_4I_4R,
+			Q => counter_Base_rate_Q
+		);
+
+	u4_Counter_Half_Base_rate : entity work.custom_counter_2sec_4I_4R 
+		port map(
+			clk => clk,
+			reset => reset,
+			enable => led_enable,
+			clk_freq_mhz => clk_freq_mhz,
+			base_rate_4I_4R => base_rate_4I_4R,
+			Q => counter_Half_Base_rate_Q
+		);
+
+	u6_Counter_Quarter_Base_rate : entity work.custom_counter_2sec_4I_4R 
+		port map(
+			clk => clk,
+			reset => reset,
+			enable => led_enable,
+			clk_freq_mhz => clk_freq_mhz,
+			base_rate_4I_4R => base_rate_4I_4R,
+			Q => counter_Quarter_Base_rate_Q
 		);
 		
 	-- state machine to detect button presses and then change the state to the next led pattern. 
 	clocked : process(clk)
 	begin
-		if reset = '1' then
+		if reset = '0' then
 			--reset logic here. 
 			current_state <= RIGHT_SHIFT;
 			led_enable <= '0';
 			counter <= (others => '0');
+			base_rate_4I_4R <= resize(unsigned(Base_rate), 32);
+			LEDR_pattern <= "0000000";
 		elsif rising_edge(clk) then
 			current_state <= next_state;
 			led_enable <= '1';
 
 			--led(7) always blink;
-			counter <= counter + 1;
-			base_limit <= resize(unsigned(Base_rate), 12);
-			if counter = base_limit then
-				counter <= (others => '0');
-				LEDR(7) <= not LEDR(7);
+			if counter_Base_rate_Q = '1' then
+				LEDR_7 <= not LEDR_7;
 			end if;
+
 		end if;
 
 		case current_state is
-			-- when LEFT_SHIFT =>
-			-- 	-- led(7) blink;
-			-- 	led_enable_shift_left <= led_enable;
-			-- 	led_enable_shift_right <= not led_enable;
+			when LEFT_SHIFT => -- 1/4 base rate
+				led_enable_shift_right <= '0';
+				led_enable_shift_left <= led_enable;
 
-			when RIGHT_SHIFT =>
+				if counter_Quarter_Base_rate_Q = '1' then
+					LEDR_pattern <= LEDR_SHL_pattern;
+				end if;
+
+			when RIGHT_SHIFT => -- 1/2 base rate
 				led_enable_shift_right <= led_enable;
-				led_enable_shift_left <= not led_enable;
+				led_enable_shift_left <= '0';
+
+				if counter_Half_Base_rate_Q = '1' then
+					LEDR_pattern <= LEDR_SHR_pattern;
+				end if;
 
 			when others =>
 
@@ -89,7 +135,7 @@ begin
 
 		end case;
 
-		LEDR <= LEDR(7) & LEDR_pattern;
+		LEDR <= LEDR_7 & LEDR_pattern;
 
 
 	end process;
@@ -99,13 +145,13 @@ begin
   	begin
 		case current_state is
 			when RIGHT_SHIFT =>
-				if PB_signal then
+				if PB_signal = '1' then
 					next_state <= LEFT_SHIFT;
 				end if;
-			-- when LEFT_SHIFT =>
-			-- 	if PB_signal then
-			-- 		next_state <= RIGHT_SHIFT;
-			-- 	end if;
+			when LEFT_SHIFT =>
+				if PB_signal = '1' then
+					next_state <= RIGHT_SHIFT;
+				end if;
 
 			when others =>
 				-- do nothing

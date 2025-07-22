@@ -1,5 +1,5 @@
 Analysis & Synthesis report for hello_world
-Mon Jul 14 05:25:07 2025
+Mon Jul 14 09:49:06 2025
 Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 
 
@@ -17,13 +17,13 @@ Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
   9. State Machine - |TopLevelSchematic|LED_Patterns:inst|led_right_shift:u2_led_right_shift|current_state
  10. State Machine - |TopLevelSchematic|LED_Patterns:inst|button_conditioner:u1_button_conditioner|one_pulse:u2_one_pulse|current_state
  11. User-Specified and Inferred Latches
- 12. Registers Removed During Synthesis
- 13. Removed Registers Triggering Further Register Optimizations
- 14. General Register Statistics
- 15. Inverted Register Statistics
- 16. Multiplexer Restructuring Statistics (Restructuring Performed)
- 17. Port Connectivity Checks: "LED_Patterns:inst|led_right_shift:u2_led_right_shift|custom_counter_2sec_4I_4R:u1_counter"
- 18. Port Connectivity Checks: "LED_Patterns:inst|button_conditioner:u1_button_conditioner"
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Port Connectivity Checks: "LED_Patterns:inst|custom_counter_2sec_4I_4R:u6_Counter_Quarter_Base_rate"
+ 16. Port Connectivity Checks: "LED_Patterns:inst|custom_counter_2sec_4I_4R:u4_Counter_Half_Base_rate"
+ 17. Port Connectivity Checks: "LED_Patterns:inst|custom_counter_2sec_4I_4R:u3_Counter_Base_rate"
+ 18. Port Connectivity Checks: "LED_Patterns:inst|led_right_shift:u2_led_right_shift|custom_counter_2sec_4I_4R:u1_counter"
  19. Post-Synthesis Netlist Statistics for Top Partition
  20. Elapsed Time Per Partition
  21. Analysis & Synthesis Messages
@@ -53,17 +53,17 @@ on the Quartus Prime software download page.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Jul 14 05:25:07 2025           ;
+; Analysis & Synthesis Status     ; Successful - Mon Jul 14 09:49:06 2025           ;
 ; Quartus Prime Version           ; 24.1std.0 Build 1077 03/04/2025 SC Lite Edition ;
 ; Revision Name                   ; hello_world                                     ;
 ; Top-level Entity Name           ; TopLevelSchematic                               ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 85                                              ;
+; Total registers                 ; 252                                             ;
 ; Total pins                      ; 16                                              ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 0                                               ;
-; Total DSP Blocks                ; 5                                               ;
+; Total DSP Blocks                ; 15                                              ;
 ; Total HSSI RX PCSs              ; 0                                               ;
 ; Total HSSI PMA RX Deserializers ; 0                                               ;
 ; Total HSSI TX PCSs              ; 0                                               ;
@@ -197,38 +197,42 @@ on the Quartus Prime software download page.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 71             ;
+; Estimate of Logic utilization (ALMs needed) ; 232            ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 114            ;
+; Combinational ALUT usage for logic          ; 379            ;
 ;     -- 7 input functions                    ; 0              ;
-;     -- 6 input functions                    ; 23             ;
-;     -- 5 input functions                    ; 0              ;
-;     -- 4 input functions                    ; 8              ;
-;     -- <=3 input functions                  ; 83             ;
+;     -- 6 input functions                    ; 77             ;
+;     -- 5 input functions                    ; 3              ;
+;     -- 4 input functions                    ; 31             ;
+;     -- <=3 input functions                  ; 268            ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 85             ;
+; Dedicated logic registers                   ; 252            ;
 ;                                             ;                ;
 ; I/O pins                                    ; 16             ;
 ;                                             ;                ;
-; Total DSP Blocks                            ; 5              ;
+; Total DSP Blocks                            ; 15             ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 85             ;
-; Total fan-out                               ; 695            ;
-; Average fan-out                             ; 2.94           ;
+; Maximum fan-out                             ; 252            ;
+; Total fan-out                               ; 2213           ;
+; Average fan-out                             ; 3.26           ;
 +---------------------------------------------+----------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                ;
-+-------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------+---------------------------+--------------+
-; Compilation Hierarchy Node                      ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                          ; Entity Name               ; Library Name ;
-+-------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------+---------------------------+--------------+
-; |TopLevelSchematic                              ; 114 (0)             ; 85 (0)                    ; 0                 ; 5          ; 16   ; 0            ; |TopLevelSchematic                                                                                           ; TopLevelSchematic         ; work         ;
-;    |LED_Patterns:inst|                          ; 114 (1)             ; 85 (2)                    ; 0                 ; 5          ; 0    ; 0            ; |TopLevelSchematic|LED_Patterns:inst                                                                         ; LED_Patterns              ; work         ;
-;       |led_right_shift:u2_led_right_shift|      ; 113 (6)             ; 83 (18)                   ; 0                 ; 5          ; 0    ; 0            ; |TopLevelSchematic|LED_Patterns:inst|led_right_shift:u2_led_right_shift                                      ; led_right_shift           ; work         ;
-;          |custom_counter_2sec_4I_4R:u1_counter| ; 107 (107)           ; 65 (65)                   ; 0                 ; 5          ; 0    ; 0            ; |TopLevelSchematic|LED_Patterns:inst|led_right_shift:u2_led_right_shift|custom_counter_2sec_4I_4R:u1_counter ; custom_counter_2sec_4I_4R ; work         ;
-+-------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------+---------------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                            ;
++-------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------+---------------------------+--------------+
+; Compilation Hierarchy Node                                  ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                          ; Entity Name               ; Library Name ;
++-------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------+---------------------------+--------------+
+; |TopLevelSchematic                                          ; 379 (0)             ; 252 (0)                   ; 0                 ; 15         ; 16   ; 0            ; |TopLevelSchematic                                                                                           ; TopLevelSchematic         ; work         ;
+;    |LED_Patterns:inst|                                      ; 379 (18)            ; 252 (3)                   ; 0                 ; 15         ; 0    ; 0            ; |TopLevelSchematic|LED_Patterns:inst                                                                         ; LED_Patterns              ; work         ;
+;       |button_conditioner:u1_button_conditioner|            ; 35 (32)             ; 33 (28)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevelSchematic|LED_Patterns:inst|button_conditioner:u1_button_conditioner                                ; button_conditioner        ; work         ;
+;          |one_pulse:u2_one_pulse|                           ; 3 (3)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevelSchematic|LED_Patterns:inst|button_conditioner:u1_button_conditioner|one_pulse:u2_one_pulse         ; one_pulse                 ; work         ;
+;       |custom_counter_2sec_4I_4R:u3_Counter_Base_rate|      ; 107 (107)           ; 65 (65)                   ; 0                 ; 5          ; 0    ; 0            ; |TopLevelSchematic|LED_Patterns:inst|custom_counter_2sec_4I_4R:u3_Counter_Base_rate                          ; custom_counter_2sec_4I_4R ; work         ;
+;       |custom_counter_2sec_4I_4R:u4_Counter_Half_Base_rate| ; 106 (106)           ; 65 (65)                   ; 0                 ; 5          ; 0    ; 0            ; |TopLevelSchematic|LED_Patterns:inst|custom_counter_2sec_4I_4R:u4_Counter_Half_Base_rate                     ; custom_counter_2sec_4I_4R ; work         ;
+;       |led_right_shift:u2_led_right_shift|                  ; 113 (6)             ; 86 (21)                   ; 0                 ; 5          ; 0    ; 0            ; |TopLevelSchematic|LED_Patterns:inst|led_right_shift:u2_led_right_shift                                      ; led_right_shift           ; work         ;
+;          |custom_counter_2sec_4I_4R:u1_counter|             ; 107 (107)           ; 65 (65)                   ; 0                 ; 5          ; 0    ; 0            ; |TopLevelSchematic|LED_Patterns:inst|led_right_shift:u2_led_right_shift|custom_counter_2sec_4I_4R:u1_counter ; custom_counter_2sec_4I_4R ; work         ;
++-------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------+---------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -237,28 +241,29 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------+-------------+
 ; Statistic                       ; Number Used ;
 +---------------------------------+-------------+
-; Two Independent 18x18           ; 2           ;
-; Sum of two 18x18                ; 2           ;
-; Independent 27x27               ; 1           ;
-; Total number of DSP blocks      ; 5           ;
+; Two Independent 18x18           ; 6           ;
+; Sum of two 18x18                ; 6           ;
+; Independent 27x27               ; 3           ;
+; Total number of DSP blocks      ; 15          ;
 ;                                 ;             ;
-; Fixed Point Unsigned Multiplier ; 7           ;
+; Fixed Point Unsigned Multiplier ; 21          ;
 +---------------------------------+-------------+
 
 
 Encoding Type:  One-Hot
-+------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |TopLevelSchematic|LED_Patterns:inst|led_right_shift:u2_led_right_shift|current_state                              ;
-+------------------+------------------+------------------+------------------+------------------+------------------+------------------+
-; Name             ; current_state.S5 ; current_state.S4 ; current_state.S3 ; current_state.S2 ; current_state.S1 ; current_state.S0 ;
-+------------------+------------------+------------------+------------------+------------------+------------------+------------------+
-; current_state.S0 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ;
-; current_state.S1 ; 0                ; 0                ; 0                ; 0                ; 1                ; 1                ;
-; current_state.S2 ; 0                ; 0                ; 0                ; 1                ; 0                ; 1                ;
-; current_state.S3 ; 0                ; 0                ; 1                ; 0                ; 0                ; 1                ;
-; current_state.S4 ; 0                ; 1                ; 0                ; 0                ; 0                ; 1                ;
-; current_state.S5 ; 1                ; 0                ; 0                ; 0                ; 0                ; 1                ;
-+------------------+------------------+------------------+------------------+------------------+------------------+------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |TopLevelSchematic|LED_Patterns:inst|led_right_shift:u2_led_right_shift|current_state                                                 ;
++------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+
+; Name             ; current_state.S6 ; current_state.S5 ; current_state.S4 ; current_state.S3 ; current_state.S2 ; current_state.S1 ; current_state.S0 ;
++------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+
+; current_state.S0 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ;
+; current_state.S1 ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ; 1                ;
+; current_state.S2 ; 0                ; 0                ; 0                ; 0                ; 1                ; 0                ; 1                ;
+; current_state.S3 ; 0                ; 0                ; 0                ; 1                ; 0                ; 0                ; 1                ;
+; current_state.S4 ; 0                ; 0                ; 1                ; 0                ; 0                ; 0                ; 1                ;
+; current_state.S5 ; 0                ; 1                ; 0                ; 0                ; 0                ; 0                ; 1                ;
+; current_state.S6 ; 1                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ;
++------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+
 
 
 Encoding Type:  One-Hot
@@ -273,75 +278,22 @@ Encoding Type:  One-Hot
 +-------------------------+-------------------------+-------------------------+------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                           ;
-+----------------------------------------------------+---------------------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal             ; Free of Timing Hazards ;
-+----------------------------------------------------+---------------------------------+------------------------+
-; LED_Patterns:inst|led_enable_shift_right           ; LED_Patterns:inst|current_state ; yes                    ;
-; Number of user-specified and inferred latches = 1  ;                                 ;                        ;
-+----------------------------------------------------+---------------------------------+------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                                                                                     ;
++----------------------------------------------------+-----------------------------------------------------------------------------------------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal                                                                                       ; Free of Timing Hazards ;
++----------------------------------------------------+-----------------------------------------------------------------------------------------------------------+------------------------+
+; LED_Patterns:inst|LEDR_pattern[6]                  ; LED_Patterns:inst|LEDR_pattern[6]                                                                         ; yes                    ;
+; LED_Patterns:inst|LEDR_pattern[5]                  ; LED_Patterns:inst|LEDR_pattern[6]                                                                         ; yes                    ;
+; LED_Patterns:inst|LEDR_pattern[4]                  ; LED_Patterns:inst|LEDR_pattern[6]                                                                         ; yes                    ;
+; LED_Patterns:inst|LEDR_pattern[3]                  ; LED_Patterns:inst|LEDR_pattern[6]                                                                         ; yes                    ;
+; LED_Patterns:inst|LEDR_pattern[2]                  ; LED_Patterns:inst|LEDR_pattern[6]                                                                         ; yes                    ;
+; LED_Patterns:inst|LEDR_pattern[1]                  ; LED_Patterns:inst|LEDR_pattern[6]                                                                         ; yes                    ;
+; LED_Patterns:inst|LEDR_pattern[0]                  ; LED_Patterns:inst|LEDR_pattern[6]                                                                         ; yes                    ;
+; LED_Patterns:inst|next_state                       ; LED_Patterns:inst|button_conditioner:u1_button_conditioner|one_pulse:u2_one_pulse|current_state.S_PULSE_H ; yes                    ;
+; Number of user-specified and inferred latches = 8  ;                                                                                                           ;                        ;
++----------------------------------------------------+-----------------------------------------------------------------------------------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                                 ;
-+-----------------------------------------------------------------------------------------------------------+----------------------------------------+
-; Register name                                                                                             ; Reason for Removal                     ;
-+-----------------------------------------------------------------------------------------------------------+----------------------------------------+
-; LED_Patterns:inst|led_right_shift:u2_led_right_shift|led_output[6]                                        ; Stuck at GND due to stuck port data_in ;
-; LED_Patterns:inst|led_right_shift:u2_led_right_shift|LEDR[6]                                              ; Stuck at GND due to stuck port data_in ;
-; LED_Patterns:inst|button_conditioner:u1_button_conditioner|one_pulse:u2_one_pulse|input_signal            ; Lost fanout                            ;
-; LED_Patterns:inst|button_conditioner:u1_button_conditioner|one_pulse:u2_one_pulse|input_signal_prev       ; Lost fanout                            ;
-; LED_Patterns:inst|button_conditioner:u1_button_conditioner|debounced                                      ; Lost fanout                            ;
-; LED_Patterns:inst|button_conditioner:u1_button_conditioner|stored_value                                   ; Lost fanout                            ;
-; LED_Patterns:inst|button_conditioner:u1_button_conditioner|current_state                                  ; Lost fanout                            ;
-; LED_Patterns:inst|button_conditioner:u1_button_conditioner|counter[0..22]                                 ; Lost fanout                            ;
-; LED_Patterns:inst|button_conditioner:u1_button_conditioner|sync_reg2                                      ; Lost fanout                            ;
-; LED_Patterns:inst|button_conditioner:u1_button_conditioner|sync_reg1                                      ; Lost fanout                            ;
-; LED_Patterns:inst|button_conditioner:u1_button_conditioner|one_pulse:u2_one_pulse|current_state.S_IDLE    ; Lost fanout                            ;
-; LED_Patterns:inst|button_conditioner:u1_button_conditioner|one_pulse:u2_one_pulse|current_state.S_PULSE_H ; Lost fanout                            ;
-; LED_Patterns:inst|button_conditioner:u1_button_conditioner|one_pulse:u2_one_pulse|current_state.S_PULSE_L ; Lost fanout                            ;
-; Total Number of Removed Registers = 35                                                                    ;                                        ;
-+-----------------------------------------------------------------------------------------------------------+----------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                                                                            ;
-+------------------------------------------------------------------------------------------------+---------------------------+---------------------------------------------------------------------------+
-; Register name                                                                                  ; Reason for Removal        ; Registers Removed due to This Register                                    ;
-+------------------------------------------------------------------------------------------------+---------------------------+---------------------------------------------------------------------------+
-; LED_Patterns:inst|button_conditioner:u1_button_conditioner|one_pulse:u2_one_pulse|input_signal ; Lost Fanouts              ; LED_Patterns:inst|button_conditioner:u1_button_conditioner|debounced,     ;
-;                                                                                                ;                           ; LED_Patterns:inst|button_conditioner:u1_button_conditioner|stored_value,  ;
-;                                                                                                ;                           ; LED_Patterns:inst|button_conditioner:u1_button_conditioner|current_state, ;
-;                                                                                                ;                           ; LED_Patterns:inst|button_conditioner:u1_button_conditioner|counter[16],   ;
-;                                                                                                ;                           ; LED_Patterns:inst|button_conditioner:u1_button_conditioner|counter[17],   ;
-;                                                                                                ;                           ; LED_Patterns:inst|button_conditioner:u1_button_conditioner|counter[18],   ;
-;                                                                                                ;                           ; LED_Patterns:inst|button_conditioner:u1_button_conditioner|counter[19],   ;
-;                                                                                                ;                           ; LED_Patterns:inst|button_conditioner:u1_button_conditioner|counter[20],   ;
-;                                                                                                ;                           ; LED_Patterns:inst|button_conditioner:u1_button_conditioner|counter[21],   ;
-;                                                                                                ;                           ; LED_Patterns:inst|button_conditioner:u1_button_conditioner|counter[7],    ;
-;                                                                                                ;                           ; LED_Patterns:inst|button_conditioner:u1_button_conditioner|counter[22],   ;
-;                                                                                                ;                           ; LED_Patterns:inst|button_conditioner:u1_button_conditioner|counter[15],   ;
-;                                                                                                ;                           ; LED_Patterns:inst|button_conditioner:u1_button_conditioner|counter[14],   ;
-;                                                                                                ;                           ; LED_Patterns:inst|button_conditioner:u1_button_conditioner|counter[13],   ;
-;                                                                                                ;                           ; LED_Patterns:inst|button_conditioner:u1_button_conditioner|counter[12],   ;
-;                                                                                                ;                           ; LED_Patterns:inst|button_conditioner:u1_button_conditioner|counter[11],   ;
-;                                                                                                ;                           ; LED_Patterns:inst|button_conditioner:u1_button_conditioner|counter[10],   ;
-;                                                                                                ;                           ; LED_Patterns:inst|button_conditioner:u1_button_conditioner|counter[9],    ;
-;                                                                                                ;                           ; LED_Patterns:inst|button_conditioner:u1_button_conditioner|counter[8],    ;
-;                                                                                                ;                           ; LED_Patterns:inst|button_conditioner:u1_button_conditioner|counter[6],    ;
-;                                                                                                ;                           ; LED_Patterns:inst|button_conditioner:u1_button_conditioner|counter[5],    ;
-;                                                                                                ;                           ; LED_Patterns:inst|button_conditioner:u1_button_conditioner|counter[4],    ;
-;                                                                                                ;                           ; LED_Patterns:inst|button_conditioner:u1_button_conditioner|counter[3],    ;
-;                                                                                                ;                           ; LED_Patterns:inst|button_conditioner:u1_button_conditioner|counter[2],    ;
-;                                                                                                ;                           ; LED_Patterns:inst|button_conditioner:u1_button_conditioner|counter[1],    ;
-;                                                                                                ;                           ; LED_Patterns:inst|button_conditioner:u1_button_conditioner|counter[0],    ;
-;                                                                                                ;                           ; LED_Patterns:inst|button_conditioner:u1_button_conditioner|sync_reg2,     ;
-;                                                                                                ;                           ; LED_Patterns:inst|button_conditioner:u1_button_conditioner|sync_reg1      ;
-; LED_Patterns:inst|led_right_shift:u2_led_right_shift|led_output[6]                             ; Stuck at GND              ; LED_Patterns:inst|led_right_shift:u2_led_right_shift|LEDR[6]              ;
-;                                                                                                ; due to stuck port data_in ;                                                                           ;
-+------------------------------------------------------------------------------------------------+---------------------------+---------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -349,12 +301,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 85    ;
-; Number of registers using Synchronous Clear  ; 33    ;
+; Total registers                              ; 252   ;
+; Number of registers using Synchronous Clear  ; 120   ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 8     ;
+; Number of registers using Asynchronous Clear ; 38    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 76    ;
+; Number of registers using Clock Enable       ; 206   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -364,7 +316,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; LED_Patterns:inst|current_state        ; 1       ;
+; LED_Patterns:inst|current_state        ; 14      ;
 ; Total number of inverted registers = 1 ;         ;
 +----------------------------------------+---------+
 
@@ -374,9 +326,56 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 23 bits   ; 46 LEs        ; 0 LEs                ; 46 LEs                 ; Yes        ; |TopLevelSchematic|LED_Patterns:inst|button_conditioner:u1_button_conditioner|counter[16]                                ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |TopLevelSchematic|LED_Patterns:inst|custom_counter_2sec_4I_4R:u4_Counter_Half_Base_rate|counter_Q                       ;
+; 3:1                ; 23 bits   ; 46 LEs        ; 0 LEs                ; 46 LEs                 ; Yes        ; |TopLevelSchematic|LED_Patterns:inst|button_conditioner:u1_button_conditioner|counter[8]                                 ;
 ; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevelSchematic|LED_Patterns:inst|led_right_shift:u2_led_right_shift|custom_counter_2sec_4I_4R:u1_counter|counter[15] ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevelSchematic|LED_Patterns:inst|custom_counter_2sec_4I_4R:u3_Counter_Base_rate|counter[23]                          ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevelSchematic|LED_Patterns:inst|custom_counter_2sec_4I_4R:u4_Counter_Half_Base_rate|counter[23]                     ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |TopLevelSchematic|LED_Patterns:inst|LEDR_pattern[1]                                                                     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "LED_Patterns:inst|custom_counter_2sec_4I_4R:u6_Counter_Quarter_Base_rate"                             ;
++------------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                   ; Type   ; Severity ; Details                                                                             ;
++------------------------+--------+----------+-------------------------------------------------------------------------------------+
+; clk_freq_mhz[5..4]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; clk_freq_mhz[31..6]    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; clk_freq_mhz[3..2]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; clk_freq_mhz[1]        ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; clk_freq_mhz[0]        ; Input  ; Info     ; Stuck at GND                                                                        ;
+; base_rate_4i_4r[31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; q                      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "LED_Patterns:inst|custom_counter_2sec_4I_4R:u4_Counter_Half_Base_rate" ;
++------------------------+-------+----------+-------------------------------------------------------+
+; Port                   ; Type  ; Severity ; Details                                               ;
++------------------------+-------+----------+-------------------------------------------------------+
+; clk_freq_mhz[5..4]     ; Input ; Info     ; Stuck at VCC                                          ;
+; clk_freq_mhz[31..6]    ; Input ; Info     ; Stuck at GND                                          ;
+; clk_freq_mhz[3..2]     ; Input ; Info     ; Stuck at GND                                          ;
+; clk_freq_mhz[1]        ; Input ; Info     ; Stuck at VCC                                          ;
+; clk_freq_mhz[0]        ; Input ; Info     ; Stuck at GND                                          ;
+; base_rate_4i_4r[31..8] ; Input ; Info     ; Stuck at GND                                          ;
++------------------------+-------+----------+-------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "LED_Patterns:inst|custom_counter_2sec_4I_4R:u3_Counter_Base_rate" ;
++------------------------+-------+----------+--------------------------------------------------+
+; Port                   ; Type  ; Severity ; Details                                          ;
++------------------------+-------+----------+--------------------------------------------------+
+; clk_freq_mhz[5..4]     ; Input ; Info     ; Stuck at VCC                                     ;
+; clk_freq_mhz[31..6]    ; Input ; Info     ; Stuck at GND                                     ;
+; clk_freq_mhz[3..2]     ; Input ; Info     ; Stuck at GND                                     ;
+; clk_freq_mhz[1]        ; Input ; Info     ; Stuck at VCC                                     ;
+; clk_freq_mhz[0]        ; Input ; Info     ; Stuck at GND                                     ;
+; base_rate_4i_4r[31..8] ; Input ; Info     ; Stuck at GND                                     ;
++------------------------+-------+----------+--------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------+
@@ -393,46 +392,38 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +------------------------+-------+----------+---------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "LED_Patterns:inst|button_conditioner:u1_button_conditioner"                         ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 85                          ;
-;     CLR               ; 2                           ;
-;     ENA               ; 38                          ;
-;     ENA CLR           ; 6                           ;
-;     ENA SCLR          ; 32                          ;
+; arriav_ff             ; 252                         ;
+;     CLR               ; 8                           ;
+;     CLR SCLR          ; 23                          ;
+;     ENA               ; 103                         ;
+;     ENA CLR           ; 7                           ;
+;     ENA SCLR          ; 96                          ;
 ;     SCLR              ; 1                           ;
-;     plain             ; 6                           ;
-; arriav_lcell_comb     ; 115                         ;
-;     arith             ; 46                          ;
-;         1 data inputs ; 32                          ;
-;         2 data inputs ; 14                          ;
-;     normal            ; 51                          ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 3                           ;
-;         2 data inputs ; 15                          ;
-;         3 data inputs ; 1                           ;
-;         4 data inputs ; 8                           ;
-;         6 data inputs ; 23                          ;
-;     shared            ; 18                          ;
-;         2 data inputs ; 9                           ;
-;         3 data inputs ; 9                           ;
-; arriav_mac            ; 5                           ;
+;     plain             ; 14                          ;
+; arriav_lcell_comb     ; 379                         ;
+;     arith             ; 161                         ;
+;         1 data inputs ; 119                         ;
+;         2 data inputs ; 42                          ;
+;     normal            ; 164                         ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 21                          ;
+;         3 data inputs ; 28                          ;
+;         4 data inputs ; 31                          ;
+;         5 data inputs ; 3                           ;
+;         6 data inputs ; 77                          ;
+;     shared            ; 54                          ;
+;         2 data inputs ; 27                          ;
+;         3 data inputs ; 27                          ;
+; arriav_mac            ; 15                          ;
 ; boundary_port         ; 16                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 5.00                        ;
-; Average LUT depth     ; 2.63                        ;
+; Average LUT depth     ; 2.71                        ;
 +-----------------------+-----------------------------+
 
 
@@ -451,7 +442,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
-    Info: Processing started: Mon Jul 14 05:25:01 2025
+    Info: Processing started: Mon Jul 14 09:49:00 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off hello_world -c hello_world
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20032): Parallel compilation is enabled and will use up to 16 processors
@@ -467,7 +458,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file led_rig
     Info (12022): Found design unit 1: led_right_shift-logic File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/led_right_shift.vhd Line: 15
     Info (12023): Found entity 1: led_right_shift File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/led_right_shift.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file led_patterns.vhd
-    Info (12022): Found design unit 1: LED_Patterns-my_architecture File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 20
+    Info (12022): Found design unit 1: LED_Patterns-my_architecture File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 19
     Info (12023): Found entity 1: LED_Patterns File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file button_conditioner.vhd
     Info (12022): Found design unit 1: button_conditioner-logic File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/button_conditioner.vhd Line: 15
@@ -478,50 +469,107 @@ Info (12021): Found 2 design units, including 1 entities, in source file /users/
 Info (12127): Elaborating entity "TopLevelSchematic" for the top level hierarchy
 Warning (275009): Pin "SW" not connected
 Info (12128): Elaborating entity "LED_Patterns" for hierarchy "LED_Patterns:inst"
-Warning (10036): Verilog HDL or VHDL warning at LED_patterns.vhd(25): object "led_enable_shift_left" assigned a value but never read File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 25
-Warning (10492): VHDL Process Statement warning at LED_patterns.vhd(58): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 58
-Warning (10492): VHDL Process Statement warning at LED_patterns.vhd(76): signal "current_state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 76
-Warning (10492): VHDL Process Statement warning at LED_patterns.vhd(83): signal "led_enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 83
-Warning (10492): VHDL Process Statement warning at LED_patterns.vhd(84): signal "led_enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 84
-Warning (10492): VHDL Process Statement warning at LED_patterns.vhd(92): signal "LEDR_pattern" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 92
-Warning (10631): VHDL Process Statement warning at LED_patterns.vhd(56): inferring latch(es) for signal or variable "led_enable_shift_right", which holds its previous value in one or more paths through the process File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 56
-Warning (10492): VHDL Process Statement warning at LED_patterns.vhd(102): signal "PB_signal" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 102
-Warning (10631): VHDL Process Statement warning at LED_patterns.vhd(98): inferring latch(es) for signal or variable "next_state", which holds its previous value in one or more paths through the process File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 98
-Warning (10873): Using initial value X (don't care) for net "LEDR[7]" at LED_patterns.vhd(16) File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 16
-Info (10041): Inferred latch for "next_state" at LED_patterns.vhd(98) File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 98
-Info (10041): Inferred latch for "led_enable_shift_right" at LED_patterns.vhd(56) File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 56
-Info (12128): Elaborating entity "button_conditioner" for hierarchy "LED_Patterns:inst|button_conditioner:u1_button_conditioner" File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 38
+Warning (10540): VHDL Signal Declaration warning at LED_patterns.vhd(23): used explicit default value for signal "clk_freq_mhz" because signal was never assigned a value File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 23
+Warning (10036): Verilog HDL or VHDL warning at LED_patterns.vhd(27): object "led_enable_shift_left" assigned a value but never read File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 27
+Warning (10541): VHDL Signal Declaration warning at LED_patterns.vhd(31): used implicit default value for signal "LEDR_SHL_pattern" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 31
+Warning (10036): Verilog HDL or VHDL warning at LED_patterns.vhd(39): object "counter" assigned a value but never read File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 39
+Warning (10492): VHDL Process Statement warning at LED_patterns.vhd(97): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 97
+Warning (10492): VHDL Process Statement warning at LED_patterns.vhd(102): signal "Base_rate" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 102
+Warning (10492): VHDL Process Statement warning at LED_patterns.vhd(115): signal "current_state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 115
+Warning (10492): VHDL Process Statement warning at LED_patterns.vhd(118): signal "led_enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 118
+Warning (10492): VHDL Process Statement warning at LED_patterns.vhd(120): signal "counter_Quarter_Base_rate_Q" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 120
+Warning (10492): VHDL Process Statement warning at LED_patterns.vhd(121): signal "LEDR_SHL_pattern" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 121
+Warning (10492): VHDL Process Statement warning at LED_patterns.vhd(125): signal "led_enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 125
+Warning (10492): VHDL Process Statement warning at LED_patterns.vhd(128): signal "counter_Half_Base_rate_Q" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 128
+Warning (10492): VHDL Process Statement warning at LED_patterns.vhd(129): signal "LEDR_SHR_pattern" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 129
+Warning (10492): VHDL Process Statement warning at LED_patterns.vhd(138): signal "LEDR_7" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 138
+Warning (10492): VHDL Process Statement warning at LED_patterns.vhd(138): signal "LEDR_pattern" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 138
+Warning (10631): VHDL Process Statement warning at LED_patterns.vhd(95): inferring latch(es) for signal or variable "base_rate_4I_4R", which holds its previous value in one or more paths through the process File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 95
+Warning (10631): VHDL Process Statement warning at LED_patterns.vhd(95): inferring latch(es) for signal or variable "LEDR_pattern", which holds its previous value in one or more paths through the process File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 95
+Warning (10492): VHDL Process Statement warning at LED_patterns.vhd(148): signal "PB_signal" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 148
+Warning (10492): VHDL Process Statement warning at LED_patterns.vhd(152): signal "PB_signal" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 152
+Warning (10631): VHDL Process Statement warning at LED_patterns.vhd(144): inferring latch(es) for signal or variable "next_state", which holds its previous value in one or more paths through the process File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 144
+Info (10041): Inferred latch for "next_state" at LED_patterns.vhd(144) File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 144
+Info (10041): Inferred latch for "LEDR_pattern[0]" at LED_patterns.vhd(95) File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 95
+Info (10041): Inferred latch for "LEDR_pattern[1]" at LED_patterns.vhd(95) File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 95
+Info (10041): Inferred latch for "LEDR_pattern[2]" at LED_patterns.vhd(95) File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 95
+Info (10041): Inferred latch for "LEDR_pattern[3]" at LED_patterns.vhd(95) File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 95
+Info (10041): Inferred latch for "LEDR_pattern[4]" at LED_patterns.vhd(95) File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 95
+Info (10041): Inferred latch for "LEDR_pattern[5]" at LED_patterns.vhd(95) File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 95
+Info (10041): Inferred latch for "LEDR_pattern[6]" at LED_patterns.vhd(95) File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 95
+Info (10041): Inferred latch for "base_rate_4I_4R[0]" at LED_patterns.vhd(95) File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 95
+Info (10041): Inferred latch for "base_rate_4I_4R[1]" at LED_patterns.vhd(95) File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 95
+Info (10041): Inferred latch for "base_rate_4I_4R[2]" at LED_patterns.vhd(95) File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 95
+Info (10041): Inferred latch for "base_rate_4I_4R[3]" at LED_patterns.vhd(95) File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 95
+Info (10041): Inferred latch for "base_rate_4I_4R[4]" at LED_patterns.vhd(95) File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 95
+Info (10041): Inferred latch for "base_rate_4I_4R[5]" at LED_patterns.vhd(95) File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 95
+Info (10041): Inferred latch for "base_rate_4I_4R[6]" at LED_patterns.vhd(95) File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 95
+Info (10041): Inferred latch for "base_rate_4I_4R[7]" at LED_patterns.vhd(95) File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 95
+Info (10041): Inferred latch for "base_rate_4I_4R[8]" at LED_patterns.vhd(95) File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 95
+Info (10041): Inferred latch for "base_rate_4I_4R[9]" at LED_patterns.vhd(95) File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 95
+Info (10041): Inferred latch for "base_rate_4I_4R[10]" at LED_patterns.vhd(95) File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 95
+Info (10041): Inferred latch for "base_rate_4I_4R[11]" at LED_patterns.vhd(95) File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 95
+Info (10041): Inferred latch for "base_rate_4I_4R[12]" at LED_patterns.vhd(95) File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 95
+Info (10041): Inferred latch for "base_rate_4I_4R[13]" at LED_patterns.vhd(95) File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 95
+Info (10041): Inferred latch for "base_rate_4I_4R[14]" at LED_patterns.vhd(95) File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 95
+Info (10041): Inferred latch for "base_rate_4I_4R[15]" at LED_patterns.vhd(95) File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 95
+Info (10041): Inferred latch for "base_rate_4I_4R[16]" at LED_patterns.vhd(95) File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 95
+Info (10041): Inferred latch for "base_rate_4I_4R[17]" at LED_patterns.vhd(95) File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 95
+Info (10041): Inferred latch for "base_rate_4I_4R[18]" at LED_patterns.vhd(95) File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 95
+Info (10041): Inferred latch for "base_rate_4I_4R[19]" at LED_patterns.vhd(95) File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 95
+Info (10041): Inferred latch for "base_rate_4I_4R[20]" at LED_patterns.vhd(95) File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 95
+Info (10041): Inferred latch for "base_rate_4I_4R[21]" at LED_patterns.vhd(95) File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 95
+Info (10041): Inferred latch for "base_rate_4I_4R[22]" at LED_patterns.vhd(95) File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 95
+Info (10041): Inferred latch for "base_rate_4I_4R[23]" at LED_patterns.vhd(95) File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 95
+Info (10041): Inferred latch for "base_rate_4I_4R[24]" at LED_patterns.vhd(95) File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 95
+Info (10041): Inferred latch for "base_rate_4I_4R[25]" at LED_patterns.vhd(95) File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 95
+Info (10041): Inferred latch for "base_rate_4I_4R[26]" at LED_patterns.vhd(95) File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 95
+Info (10041): Inferred latch for "base_rate_4I_4R[27]" at LED_patterns.vhd(95) File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 95
+Info (10041): Inferred latch for "base_rate_4I_4R[28]" at LED_patterns.vhd(95) File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 95
+Info (10041): Inferred latch for "base_rate_4I_4R[29]" at LED_patterns.vhd(95) File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 95
+Info (10041): Inferred latch for "base_rate_4I_4R[30]" at LED_patterns.vhd(95) File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 95
+Info (10041): Inferred latch for "base_rate_4I_4R[31]" at LED_patterns.vhd(95) File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 95
+Info (12128): Elaborating entity "button_conditioner" for hierarchy "LED_Patterns:inst|button_conditioner:u1_button_conditioner" File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 47
 Info (12128): Elaborating entity "one_pulse" for hierarchy "LED_Patterns:inst|button_conditioner:u1_button_conditioner|one_pulse:u2_one_pulse" File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/button_conditioner.vhd Line: 29
-Info (12128): Elaborating entity "led_right_shift" for hierarchy "LED_Patterns:inst|led_right_shift:u2_led_right_shift" File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 46
+Info (12128): Elaborating entity "led_right_shift" for hierarchy "LED_Patterns:inst|led_right_shift:u2_led_right_shift" File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 55
 Info (12128): Elaborating entity "custom_counter_2sec_4I_4R" for hierarchy "LED_Patterns:inst|led_right_shift:u2_led_right_shift|custom_counter_2sec_4I_4R:u1_counter" File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/led_right_shift.vhd Line: 26
 Warning (12125): Using design file base_rate.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: Base_rate-logic File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/base_rate.vhd Line: 12
     Info (12023): Found entity 1: Base_rate File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/base_rate.vhd Line: 6
 Info (12128): Elaborating entity "Base_rate" for hierarchy "Base_rate:inst1"
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDR[7]" is stuck at GND
-    Warning (13410): Pin "LEDR[6]" is stuck at GND
+Warning (13012): Latch LED_Patterns:inst|LEDR_pattern[6] has unsafe behavior File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 95
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LED_Patterns:inst|current_state File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 43
+Warning (13012): Latch LED_Patterns:inst|LEDR_pattern[5] has unsafe behavior File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 95
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LED_Patterns:inst|current_state File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 43
+Warning (13012): Latch LED_Patterns:inst|LEDR_pattern[4] has unsafe behavior File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 95
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LED_Patterns:inst|current_state File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 43
+Warning (13012): Latch LED_Patterns:inst|LEDR_pattern[3] has unsafe behavior File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 95
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LED_Patterns:inst|current_state File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 43
+Warning (13012): Latch LED_Patterns:inst|LEDR_pattern[2] has unsafe behavior File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 95
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LED_Patterns:inst|current_state File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 43
+Warning (13012): Latch LED_Patterns:inst|LEDR_pattern[1] has unsafe behavior File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 95
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LED_Patterns:inst|current_state File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 43
+Warning (13012): Latch LED_Patterns:inst|LEDR_pattern[0] has unsafe behavior File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 95
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LED_Patterns:inst|current_state File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 43
 Info (286030): Timing-Driven Synthesis is running
 Critical Warning (18061): Ignored Power-Up Level option on the following registers
-    Critical Warning (18010): Register LED_Patterns:inst|current_state will power up to High File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 34
-Info (17049): 33 registers lost all their fanouts during netlist optimizations.
+    Critical Warning (18010): Register LED_Patterns:inst|current_state will power up to High File: C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd Line: 43
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 6 input pin(s) that do not drive logic
+Warning (21074): Design contains 5 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "HPS_LED_control"
     Warning (15610): No output dependent on input pin "SW[3]"
     Warning (15610): No output dependent on input pin "SW[2]"
     Warning (15610): No output dependent on input pin "SW[1]"
     Warning (15610): No output dependent on input pin "SW[0]"
-    Warning (15610): No output dependent on input pin "PB"
-Info (21057): Implemented 166 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 475 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 8 input pins
     Info (21059): Implemented 8 output pins
-    Info (21061): Implemented 145 logic cells
-    Info (21062): Implemented 5 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 25 warnings
-    Info: Peak virtual memory: 4967 megabytes
-    Info: Processing ended: Mon Jul 14 05:25:07 2025
+    Info (21061): Implemented 444 logic cells
+    Info (21062): Implemented 15 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 45 warnings
+    Info: Peak virtual memory: 5019 megabytes
+    Info: Processing ended: Mon Jul 14 09:49:06 2025
     Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:13
 

@@ -3,109 +3,175 @@ K4
 z2
 Z0 !s12c _opt2
 Z1 !s99 nomlopt
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
 Z2 !s12c _opt1
-R1
-R2
-R1
-R2
-R1
-R2
-R1
-R2
-R1
-R2
 R1
 Z3 !s12c _opt
 R1
 R3
 R1
-R3
-R1
-R3
-R1
-R3
-R1
-R3
-R1
-R3
-R1
-R3
-R1
-R3
-R1
-R3
-R1
-R3
-R1
-R3
-R1
-R3
-R1
-R3
-R1
-R3
-R1
-R3
-R1
-R3
-R1
-R3
-R1
-R3
-R1
-R3
-R1
-R3
-R1
-R3
-R1
-R3
-R1
-R3
-R1
-R3
-R1
-R3
-R1
-R3
-R1
-R3
-R1
-R3
-R1
-R3
-R1
-R3
-R1
 !s11e vcom 2024.3 2024.09, Sep 10 2024
+R2
+R1
+R3
+R1
+R0
+R1
+R2
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R0
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R3
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R0
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
 13
 !s112 1.1
 !i10d 8192
@@ -114,29 +180,29 @@ R1
 cModel Technology
 Z4 dC:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/sim
 T_opt
-!s110 1751879674
-VozJDoQz29lf69>7?XU33M1
-04 21 5 work button_conditioner_tb logic 1
-=6-c03532e22915-686b8ffa-129-2b84
+!s110 1752488841
+VNCU@;U>zmP1QlaGgd^4zJ0
+04 15 5 work led_patterns_tb logic 1
+=4-c03532e22915-6874db89-a-18c4
 R1
 Z5 !s12f OEM100
 Z6 !s12b OEM100
-!s124 OEM10U3 
+!s124 OEM10U9 
 Z7 !s135 nogc
-Z8 o-quiet -auto_acc_if_foreign -work work
+Z8 o-quiet -auto_acc_if_foreign -work work +acc
 Z9 tCvgOpt 0
 n@_opt
 Z10 OL;O;2024.3;79
 R4
 T_opt1
-!s110 1751891837
-VkD?n_P4cBMI5aYHme3UNd1
-04 18 5 work led_right_shift_tb logic 1
-=8-c03532e22915-686bbf7d-78-4ea0
+!s110 1752489875
+Vf:hkYLV=;kzIkM7^Rm9RP1
+04 12 5 work one_pulse_tb logic 1
+=1-c03532e22915-6874df92-294-3940
 R1
 R5
 R6
-Z11 !s124 OEM10U2 
+!s124 OEM10U2 
 R7
 R8
 R9
@@ -144,318 +210,322 @@ n@_opt1
 R10
 R4
 T_opt2
-!s110 1751970123
-VO`z^DQ6ccmM;;2V3=I[_51
-04 28 5 work custom_counter_2sec_4i_4r_tb logic 1
-=12-c03532e22915-686cf14b-1be-3aa0
+!s110 1753174730
+V@VDPD=zATzo0nPneme_:90
+04 9 5 work one_pulse logic 1
+=1-c03532e22915-687f52c9-254-11b0
 R1
 R5
 R6
-R11
+!s124 OEM10U1 
 R7
-R8
+o-quiet -auto_acc_if_foreign -work work
 R9
 n@_opt2
 R10
 Ebutton_conditioner
-Z12 w1751554335
-Z13 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
-Z14 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z15 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 153
+Z11 w1752477250
+Z12 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z13 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z14 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 14
 R4
-Z16 8C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/button_conditioner.vhd
-Z17 FC:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/button_conditioner.vhd
+Z15 8C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/button_conditioner.vhd
+Z16 FC:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/button_conditioner.vhd
 l0
 L5 1
 VoG;QNJzVM1Mc0kIcLQLNd2
 !s100 Hn4zUkdk=@ZXh3WaEAXoI2
-Z18 OL;C;2024.3;79
+Z17 OL;C;2024.3;79
 33
-Z19 !s110 1751879669
+Z18 !s110 1752488837
 !i10b 1
-Z20 !s108 1751879669.000000
-Z21 !s90 -reportprogress|300|-work|work|-2008|-explicit|-vopt|-stats=none|C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/button_conditioner.vhd|
-Z22 !s107 C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/button_conditioner.vhd|
+Z19 !s108 1752488837.000000
+Z20 !s90 -reportprogress|300|-work|work|-2008|-explicit|-vopt|-stats=none|C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/button_conditioner.vhd|
+Z21 !s107 C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/button_conditioner.vhd|
 !i113 0
-Z23 o-work work -2008 -explicit
-Z24 tExplicit 1 CvgOpt 0
+Z22 o-work work -2008 -explicit
+Z23 tExplicit 1 CvgOpt 0
 Alogic
-Z25 DEx4 work 9 one_pulse 0 22 mnbm=M?3UFz?Q]TGeS>;W3
+Z24 DEx4 work 9 one_pulse 0 22 mnbm=M?3UFz?Q]TGeS>;W3
+R12
 R13
 R14
-R15
-DEx4 work 18 button_conditioner 0 22 oG;QNJzVM1Mc0kIcLQLNd2
-!i122 153
+Z25 DEx4 work 18 button_conditioner 0 22 oG;QNJzVM1Mc0kIcLQLNd2
+!i122 14
 l27
 L15 97
-VdSm>JbH3HHORX@HQNgTV42
-!s100 g:ebkgcfdB>SGlo`@c>Va3
-R18
+V>PKd7aR[E:6=mhfeZLljK3
+!s100 4K:ECz<9l@R71]8OU@GM60
+R17
 33
-R19
+R18
 !i10b 1
+R19
 R20
 R21
+!i113 0
 R22
-!i113 0
 R23
-R24
-Ebutton_conditioner_tb
-Z26 w1751879659
-R13
-R14
-R15
-!i122 152
-R4
-Z27 8C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/tb/button_conditioner_tb copy.vhd
-Z28 FC:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/tb/button_conditioner_tb copy.vhd
-l0
-L5 1
-VY9@9VL>Wm4fF^N2CN<LH13
-!s100 94<AR=4]Teaj;az[YfFez2
-R18
-33
-R19
-!i10b 1
-R20
-Z29 !s90 -reportprogress|300|-work|work|-2008|-explicit|-vopt|-stats=none|C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/tb/button_conditioner_tb copy.vhd|
-Z30 !s107 C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/tb/button_conditioner_tb copy.vhd|
-!i113 0
-R23
-R24
-Alogic
-R13
-R14
-R15
-DEx4 work 21 button_conditioner_tb 0 22 Y9@9VL>Wm4fF^N2CN<LH13
-!i122 152
-l26
-L8 104
-VG9@<T<dSiFcG>^]OQKMPK1
-!s100 TP<SGbgZ1[jnz5=R8F`co0
-R18
-33
-R19
-!i10b 1
-R20
-R29
-R30
-!i113 0
-R23
-R24
 Ecustom_counter_2sec_4i_4r
-Z31 w1751970115
+Z26 w1752477231
+R12
 R13
 R14
-R15
-!i122 216
+!i122 16
 R4
-Z32 8C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/custom_counter_2sec_4I_4R.vhd
-Z33 FC:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/custom_counter_2sec_4I_4R.vhd
+Z27 8C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/custom_counter_2sec_4I_4R.vhd
+Z28 FC:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/custom_counter_2sec_4I_4R.vhd
 l0
 L5 1
 VJSVanI^iBBhm;nIOGCRcG2
 !s100 DhWSH?KO<^UH1b7KH3F`m0
-R18
+R17
 33
-Z34 !s110 1751970121
+R18
 !i10b 1
-Z35 !s108 1751970120.000000
-Z36 !s90 -reportprogress|300|-work|work|-2008|-explicit|-vopt|-stats=none|C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/custom_counter_2sec_4I_4R.vhd|
-Z37 !s107 C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/custom_counter_2sec_4I_4R.vhd|
+R19
+Z29 !s90 -reportprogress|300|-work|work|-2008|-explicit|-vopt|-stats=none|C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/custom_counter_2sec_4I_4R.vhd|
+Z30 !s107 C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/custom_counter_2sec_4I_4R.vhd|
 !i113 0
+R22
 R23
-R24
 Alogic
+R12
 R13
 R14
-R15
-DEx4 work 25 custom_counter_2sec_4i_4r 0 22 JSVanI^iBBhm;nIOGCRcG2
-!i122 216
-l45
-L16 63
-V5QX;^03mUT=JHWm86OQb13
-!s100 a:OS9R=UaaB[NUgnJjJjz1
-R18
+Z31 DEx4 work 25 custom_counter_2sec_4i_4r 0 22 JSVanI^iBBhm;nIOGCRcG2
+!i122 16
+l42
+L16 53
+VB_Sga7UoGIzdae6F@Xo==2
+!s100 Fcn>MY2T3dT3YH9Taz[@G2
+R17
 33
-R34
+R18
 !i10b 1
-R35
-R36
-R37
+R19
+R29
+R30
 !i113 0
+R22
 R23
-R24
-Ecustom_counter_2sec_4i_4r_tb
-Z38 w1751967555
+Eled_patterns
+Z32 w1752482854
+R12
 R13
 R14
-R15
-!i122 215
+!i122 13
 R4
-Z39 8C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/tb/custom_counter_2sec_4I_4R_tb.vhd
-Z40 FC:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/tb/custom_counter_2sec_4I_4R_tb.vhd
+Z33 8C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd
+Z34 FC:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd
 l0
 L5 1
-VJiWWQ_BI^7^f]]Eo28j]z0
-!s100 RH`i?UMK^CNibnnib?HUL0
-R18
+V_>4_8D^?LJ6g7?XJ=R>MU3
+!s100 4VB]?T9lfnG[6Ej>RjX<>1
+R17
 33
-Z41 !s110 1751970120
+R18
 !i10b 1
-R35
-Z42 !s90 -reportprogress|300|-work|work|-2008|-explicit|-vopt|-stats=none|C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/tb/custom_counter_2sec_4I_4R_tb.vhd|
-Z43 !s107 C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/tb/custom_counter_2sec_4I_4R_tb.vhd|
+R19
+Z35 !s90 -reportprogress|300|-work|work|-2008|-explicit|-vopt|-stats=none|C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd|
+Z36 !s107 C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/LED_patterns.vhd|
 !i113 0
+R22
 R23
-R24
-Alogic
+Amy_architecture
+R31
+Z37 DEx4 work 15 led_right_shift 0 22 F7YWV?a6SVURm8[0W6[nm0
+R25
+R12
 R13
 R14
-R15
-DEx4 work 28 custom_counter_2sec_4i_4r_tb 0 22 JiWWQ_BI^7^f]]Eo28j]z0
-!i122 215
-l27
-L8 69
-V>hMhXa:M7JgTjF?^Z?XUi0
-!s100 XbZB5g:dL6MCD9BO64OPe0
-R18
+DEx4 work 12 led_patterns 0 22 _>4_8D^?LJ6g7?XJ=R>MU3
+!i122 13
+l45
+L19 144
+VRoTQ9G8K[N]30_Zb^g3;e0
+!s100 Pz8KZ=16E1Qah48]6BblS3
+R17
 33
-R41
+R18
 !i10b 1
+R19
 R35
-R42
-R43
+R36
 !i113 0
+R22
 R23
-R24
-Eled_right_shift
-Z44 w1751891821
+Eled_patterns_tb
+Z38 w1752488821
+R12
 R13
 R14
-R15
-!i122 172
+!i122 12
 R4
-Z45 8C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/led_right_shift.vhd
-Z46 FC:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/led_right_shift.vhd
+Z39 8C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/tb/LED_patterns_tb.vhd
+Z40 FC:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/tb/LED_patterns_tb.vhd
+l0
+L5 1
+VGlSAVkDE]@A7]:W_`jA9c0
+!s100 YREnhZ43e[n_N;Z>HSk[V1
+R17
+33
+R18
+!i10b 1
+R19
+Z41 !s90 -reportprogress|300|-work|work|-2008|-explicit|-vopt|-stats=none|C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/tb/LED_patterns_tb.vhd|
+Z42 !s107 C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/tb/LED_patterns_tb.vhd|
+!i113 0
+R22
+R23
+Alogic
+R12
+R13
+R14
+DEx4 work 15 led_patterns_tb 0 22 GlSAVkDE]@A7]:W_`jA9c0
+!i122 12
+l32
+L8 77
+VQGST6n9BUX:nzB_]?U0bb2
+!s100 >O`Sc_DR@F=L6[?Y93o_m3
+R17
+33
+R18
+!i10b 1
+R19
+R41
+R42
+!i113 0
+R22
+R23
+Eled_right_shift
+Z43 w1752481977
+R12
+R13
+R14
+!i122 17
+R4
+Z44 8C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/led_right_shift.vhd
+Z45 FC:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/led_right_shift.vhd
 l0
 L5 1
 VF7YWV?a6SVURm8[0W6[nm0
 !s100 Vg<:j_M_oS]F0ahfcSTOo2
-R18
+R17
 33
-Z47 !s110 1751891832
+Z46 !s110 1752488838
 !i10b 1
-Z48 !s108 1751891832.000000
-Z49 !s90 -reportprogress|300|-work|work|-2008|-explicit|-vopt|-stats=none|C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/led_right_shift.vhd|
-Z50 !s107 C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/led_right_shift.vhd|
+R19
+Z47 !s90 -reportprogress|300|-work|work|-2008|-explicit|-vopt|-stats=none|C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/led_right_shift.vhd|
+Z48 !s107 C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/led_right_shift.vhd|
 !i113 0
+R22
 R23
-R24
 Alogic
+R31
+R12
 R13
 R14
-R15
-DEx4 work 15 led_right_shift 0 22 F7YWV?a6SVURm8[0W6[nm0
-!i122 172
-l22
-L15 77
-V>VfV1gQd3V4DV6IJMFOz83
-!s100 0c4MEjWPVc0Tb]^[nf8iA3
-R18
+R37
+!i122 17
+l24
+L15 89
+VX95DG_m39zlo5Wlm_AF4L3
+!s100 <4`iEP<P6V6eLS4To:MQ_3
+R17
 33
-R47
+R46
 !i10b 1
-R48
-R49
-R50
-!i113 0
-R23
-R24
-Eled_right_shift_tb
-Z51 w1751891641
-R13
-R14
-R15
-!i122 171
-R4
-Z52 8C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/tb/led_shift_right_tb.vhd
-Z53 FC:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/tb/led_shift_right_tb.vhd
-l0
-L5 1
-VReX5]CHlLT>;:ecenOXZl0
-!s100 Xc93b4b>d<P`V[X<b4odj0
-R18
-33
+R19
 R47
-!i10b 1
 R48
-Z54 !s90 -reportprogress|300|-work|work|-2008|-explicit|-vopt|-stats=none|C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/tb/led_shift_right_tb.vhd|
-Z55 !s107 C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/tb/led_shift_right_tb.vhd|
 !i113 0
+R22
 R23
-R24
-Alogic
-R13
-R14
-R15
-DEx4 work 18 led_right_shift_tb 0 22 ReX5]CHlLT>;:ecenOXZl0
-!i122 171
-l31
-L8 81
-V^=mndjg3]l6ez?XM<G9lH2
-!s100 HbM><gWW2KKRn2aMSHl6o3
-R18
-33
-R47
-!i10b 1
-R48
-R54
-R55
-!i113 0
-R23
-R24
 Eone_pulse
-Z56 w1751384418
+Z49 w1752484350
+R12
 R13
 R14
-R15
-!i122 154
+!i122 19
 R4
-Z57 8C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/one_pulse.vhd
-Z58 FC:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/one_pulse.vhd
+Z50 8C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/one_pulse.vhd
+Z51 FC:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/one_pulse.vhd
 l0
 L5 1
 Vmnbm=M?3UFz?Q]TGeS>;W3
 !s100 ?P9`OR3nI:=Ra8=4Q><iL0
-R18
+R17
 33
-R19
+Z52 !s110 1752489863
 !i10b 1
-R20
-Z59 !s90 -reportprogress|300|-work|work|-2008|-explicit|-vopt|-stats=none|C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/one_pulse.vhd|
-Z60 !s107 C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/one_pulse.vhd|
+Z53 !s108 1752489863.000000
+Z54 !s90 -reportprogress|300|-work|work|-2008|-explicit|-vopt|-stats=none|C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/one_pulse.vhd|
+Z55 !s107 C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/scr/one_pulse.vhd|
 !i113 0
+R22
 R23
-R24
 Alogic
+R12
 R13
 R14
-R15
-R25
-!i122 154
+R24
+!i122 19
 l27
 L19 67
-Vh^TW6^IKZ5KP[GJ@^7X6Z1
-!s100 Z8U]@ULZGAD:5k:aD9F@O3
-R18
+V;=NN>OeUb`?DhHU=CR28l3
+!s100 J14dD?BX]9NShDCC0K^:X0
+R17
 33
-R19
+R52
 !i10b 1
-R20
+R53
+R54
+R55
+!i113 0
+R22
+R23
+Eone_pulse_tb
+Z56 w1752489794
+R12
+R13
+R14
+!i122 18
+R4
+Z57 8C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/tb/one_pulse_tb.vhd
+Z58 FC:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/tb/one_pulse_tb.vhd
+l0
+L5 1
+VIkFeeVW_E7Tmi5G@<`3Hz1
+!s100 W^hD=9F;gLjVo<5MH:F330
+R17
+33
+R52
+!i10b 1
+R53
+Z59 !s90 -reportprogress|300|-work|work|-2008|-explicit|-vopt|-stats=none|C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/tb/one_pulse_tb.vhd|
+Z60 !s107 C:/Users/jandr/Git/ADSD/My Work/Lab2/files/LED_patterns/tb/one_pulse_tb.vhd|
+!i113 0
+R22
+R23
+Alogic
+R12
+R13
+R14
+DEx4 work 12 one_pulse_tb 0 22 IkFeeVW_E7Tmi5G@<`3Hz1
+!i122 18
+l30
+L8 71
+VbkONe43Y;6[_bXHN5ke6^1
+!s100 91JKd^kB>ENT>bcNnWh>G0
+R17
+33
+R52
+!i10b 1
+R53
 R59
 R60
 !i113 0
+R22
 R23
-R24

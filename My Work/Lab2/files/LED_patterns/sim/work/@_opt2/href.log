@@ -1,4 +1,0 @@
-BEGIN 2:1:logic:custom_counter_2sec_4i_4r:work
-    baserate_raw :  2:1:logic:custom_counter_2sec_4i_4r_tb:work
-
-END 

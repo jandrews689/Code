@@ -44,7 +44,7 @@ begin
     clocked : process(clk)
     begin
         if rising_edge(clk) then
-            if reset = '1' then
+            if reset = '0' then
                 counter <= (others => '0');
                 baserate_raw <= scaled_tick_count(base_rate_4I_4R, clk_freq_mhz);
                 counter_Q <= '0';
